@@ -1,27 +1,50 @@
 #top {
-  display: flex;
   height: 50%;
-  background-color: aqua;
-  justify-content: center;
+  display: flex;
   align-items: end;
+
+}
+
+#top-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4vw;
+}
+
+h1, h3 {
+  margin: 0 !important;
+  line-height: 1;
 }
 
 #top-left {
-  background-color: darkslateblue;
+  color: var(--color-two);
 }
 
 
 #stats {
   display: flex;
+  gap: 1vw;
+}
+
+.stat {
+  text-align: center;
+  font-size: 0.9vw;
+}
+
+.stat-title {
+  color: var(--color-three);
+  opacity: 0.8;
 }
 
 #top-right {
-  background-color: red;
   width: 25%;
 }
 
 #description {
-  font-size: 2em;
+  color: var(--color-three);
+  font-size: 1.1vw;
+  opacity: 0.8;
 }
 
 

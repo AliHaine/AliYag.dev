@@ -1,13 +1,16 @@
-$color-background: #0F172A;
-$color-one: #374151;
-$color-two: #516FA0;
-$color-three: #E5E7EB;
+:root {
+  --color-background: #0F172A;
+  --color-one: #374151;
+  --color-two: #516FA0;
+  --color-three: #E5E7EB;
+}
 
 body {
-  background-color: $color-background;
+  background-color: var(--color-background);
 }
 
 * {
   margin: 0;
   padding: 0;
+  font-family: Inter;
 }
