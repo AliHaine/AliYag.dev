@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import {Inter, Jua} from "next/font/google";
 import "./globals.css";
 import Footer from "@/app/components/footer";
+import Social from "@/app/components/social";
 
 // Using the `Inter` font with Next.js font optimization
 const inter = Inter({
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body className={`${inter.className} ${jua.className}`}>
         {children}
         <Footer />
+        <Social />
       </body>
     </html>
   );

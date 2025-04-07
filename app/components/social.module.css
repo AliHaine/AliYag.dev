@@ -1,0 +1,17 @@
+#mainSocial {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 1vw;
+    left: 1vw;
+    gap: 5px;
+}
+
+.img {
+    width: 32px;
+    height: 32px;
+}
+
+.img:hover {
+    filter: hue-rotate(180deg) brightness(1.5); /* Apply color change and brighten image */
+}

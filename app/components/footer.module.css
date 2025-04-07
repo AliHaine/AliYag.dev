@@ -2,3 +2,11 @@
     text-align: center;
     color: var(--color-three);
 }
+
+.a {
+    color: var(--color-two);
+}
+
+.a:hover {
+    color: var(--color-three);
+}
