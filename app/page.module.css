@@ -1,6 +1,4 @@
 .main {
-  display: flex;
-  flex-direction: column;
   height: 100vh;
 }
 
@@ -11,9 +9,23 @@
   justify-content: center;
 }
 
+@media (max-width: 768px) {
+  #top {
+    height: auto;
+    align-items: normal;
+    justify-content: initial;
+  }
+}
+
 #bot {
   height: 50%;
   background-color: darkolivegreen;
+}
+
+@media (max-width: 768px) {
+  #bot {
+    height: auto;
+  }
 }
 
 /*------------------TOP STYLES----------------------*/
@@ -26,8 +38,22 @@
   color: var(--color-two);
 }
 
+@media (max-width: 768px) {
+  #topContent {
+    flex-direction: column;
+    justify-content: initial;
+
+  }
+}
+
 #mainTitle {
   font-size: 4.9vw;
+}
+
+@media (max-width: 768px) {
+  #mainTitle {
+    font-size: 5em;
+  }
 }
 
 #subTitle {
@@ -35,14 +61,37 @@
   padding-bottom: 4%;
 }
 
+@media (max-width: 768px) {
+  #subTitle {
+    font-size: 1.5em;
+  }
+}
+
 #stats {
   display: flex;
   gap: 1vw;
 }
 
+@media (max-width: 768px) {
+  #stats {
+    justify-content: center;
+    gap: 3vw;
+  }
+}
+
 .stat {
   text-align: center;
   font-size: 0.9vw;
+}
+
+@media (max-width: 768px) {
+  .stat {
+    font-size: 0.9em;
+  }
+}
+
+.statValue {
+  font-size: 2.9em;
 }
 
 .statTitle {
@@ -54,10 +103,27 @@
   width: 25%;
 }
 
+@media (max-width: 768px) {
+  #topRightContent {
+    width: 90%;
+  }
+}
+
 #topDescription {
   color: var(--color-three);
   font-size: 1.1vw;
   opacity: 0.8;
 }
 
+@media (max-width: 768px) {
+  #topDescription {
+    font-size: 1.4em;
+  }
+}
+
 /*------------------BOT STYLES----------------------*/
+
+#botButtons {
+  display: flex;
+  justify-content: center;
+}

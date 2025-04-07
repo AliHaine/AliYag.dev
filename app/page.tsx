@@ -13,22 +13,21 @@ export default function Home() {
             <div id={styles.stats}>
               <div className={styles.stat}>
                 <div className={styles.statTitle}>Github contributions</div>
-                <div>547</div>
+                <div className={styles.statValue}>547</div>
               </div>
               <div className={styles.stat}>
                 <div className={styles.statTitle}>Github stars</div>
-                <div>17</div>
+                <div className={styles.statValue}>17</div>
               </div>
               <div className={styles.stat}>
                 <div className={styles.statTitle}>Servers running</div>
-                <div>67</div>
+                <div className={styles.statValue}>67</div>
               </div>
               <div className={styles.stat}>
                 <div className={styles.statTitle}>Blog posts</div>
-                <div>7</div>
+                <div className={styles.statValue}>7</div>
               </div>
             </div>
-
           </div>
 
           <div id={styles.topRightContent}>
@@ -47,8 +46,12 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div id={styles.bot}>
 
+      <div id={styles.bot}>
+        <div id={styles.botButtons}>
+          <button>Projects</button>
+          <button>Blogs</button>
+        </div>
       </div>
     </main>
   );
