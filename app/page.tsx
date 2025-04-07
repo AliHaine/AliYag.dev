@@ -49,8 +49,8 @@ export default function Home() {
 
       <div id={styles.bot}>
         <div id={styles.botButtons}>
-          <button>Projects</button>
-          <button>Blogs</button>
+          <button className={`${styles.mainButtons} ${styles.leftMainButton}`}>Projects</button>
+          <button disabled={true} className={`${styles.mainButtons} ${styles.rightMainButton}`}>Blogs</button>
         </div>
       </div>
     </main>

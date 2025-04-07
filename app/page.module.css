@@ -19,7 +19,6 @@
 
 #bot {
   height: 50%;
-  background-color: darkolivegreen;
 }
 
 @media (max-width: 768px) {
@@ -124,6 +123,31 @@
 /*------------------BOT STYLES----------------------*/
 
 #botButtons {
+  margin-top: 2vw;
   display: flex;
   justify-content: center;
+}
+
+.mainButtons {
+  color: var(--color-three);
+  padding: 5px;
+  font-weight: bold;
+  background-color: var(--color-two);
+  font-size: 1.5em;
+  border: none;
+  width: 100px;
+}
+
+.mainButtons:disabled {
+  opacity: 0.5;
+}
+
+.leftMainButton {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.rightMainButton {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
