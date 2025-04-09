@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Card from "@/app/components/card";
 
 export default function Home() {
   return (
@@ -51,6 +52,10 @@ export default function Home() {
         <div id={styles.botButtons}>
           <button className={`${styles.mainButtons} ${styles.leftMainButton}`}>Projects</button>
           <button disabled={true} className={`${styles.mainButtons} ${styles.rightMainButton}`}>Blogs</button>
+        </div>
+        <div id={styles.cards}>
+          <Card />
+          <Card />
         </div>
       </div>
     </main>

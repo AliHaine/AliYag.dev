@@ -1,0 +1,29 @@
+.card {
+    background-color: red;
+    width: 800px;
+    height: 500px;
+    padding: 20px;
+}
+
+.line {
+    display: flex;
+
+}
+
+.topContent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.topContent img {
+    width: 32px;
+}
+
+.midContent {
+    justify-content: space-between;
+}
+
+.midContent img {
+    width: 40%;
+    height: 35%;
+}

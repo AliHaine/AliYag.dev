@@ -156,3 +156,10 @@
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
+
+#cards {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 50px;
+}
