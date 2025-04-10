@@ -1,30 +1,41 @@
 .card {
-    background-color: red;
+    border: 1px solid var(--color-two);
+    color: var(--color-three);
     width: 300px;
     height: 250px;
     padding: 10px;
+    border-radius: 10px;
 }
 
 .topContent {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 5px;
 }
 
 .topContent img {
-    width: 32px;
+    width: 16px;
 }
 
 .midContent {
-    justify-content: space-between;
+    align-items: center;
 }
 
 .midContent img {
-    width: 90%;
+    width: 100%;
     height: 35%;
 }
 
-.botContent {
+.cardDescription {
+    color: var(--color-three);
+    opacity: 0.8;
+    font-size: 0.7em;
+}
+
+.techContent {
     display: flex;
+    gap: 5px;
+    font-size: 0.8em;
 }
 
 @media (min-width: 1024px) {
@@ -33,4 +44,10 @@
         height: 500px;
         padding: 20px;
     }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 5px var(--color-two); }
+    50% { box-shadow: 0 0 15px var(--color-two); }
+    100% { box-shadow: 0 0 5px var(--color-two); }
 }

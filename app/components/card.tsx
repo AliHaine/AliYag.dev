@@ -5,17 +5,16 @@ export default function Card() {
         <div className={cardStyle.card} >
             <div className={cardStyle.topContent}>
                 <div>2022</div>
-                <div>My tittle</div>
+                <div>Cube3D</div>
                 <img src="/ArrowRotateIcon.png"  alt='Arrow icon'/>
             </div>
-            <div className={`${cardStyle.line} ${cardStyle.midContent}`}>
+            <div className={cardStyle.midContent}>
                 <img src="/testcard.png"  alt='Arrow icon'/>
-                <p>
-                    Lorem ipsum dolor sit amet. Eos dicta numquam non fugiat voluptatibus et quibusdam minus est explicabo assumenda. In
-                    animi quod ab mollitia corporis est officia quaerat ut pariatur
+                <p className={cardStyle.cardDescription}>
+                    2.5D game using Raycasting without GameEngine
                 </p>
             </div>
-            <div className={cardStyle.botContent}>
+            <div className={cardStyle.techContent}>
                 <div>C</div>
                 <div>Makefile</div>
             </div>

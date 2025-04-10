@@ -130,6 +130,10 @@
   width: 100px;
 }
 
+.mainButtons:enabled {
+
+}
+
 .mainButtons:disabled {
   opacity: 0.5;
 }

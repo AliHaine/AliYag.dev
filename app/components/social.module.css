@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     position: fixed;
-    bottom: 1vw;
-    left: 1vw;
+    bottom: 5px;
+    left: 5px;
     gap: 5px;
 }
 
@@ -13,5 +13,5 @@
 }
 
 .img:hover {
-    filter: hue-rotate(180deg) brightness(1.5); /* Apply color change and brighten image */
+    filter: hue-rotate(180deg) brightness(1.5);
 }
