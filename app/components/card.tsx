@@ -3,7 +3,7 @@ import cardStyle from "./card.module.css"
 export default function Card() {
     return (
         <div className={cardStyle.card} >
-            <div className={`${cardStyle.line} ${cardStyle.topContent}`}>
+            <div className={cardStyle.topContent}>
                 <div>2022</div>
                 <div>My tittle</div>
                 <img src="/ArrowRotateIcon.png"  alt='Arrow icon'/>
@@ -16,7 +16,8 @@ export default function Card() {
                 </p>
             </div>
             <div className={cardStyle.botContent}>
-
+                <div>C</div>
+                <div>Makefile</div>
             </div>
         </div>
     )

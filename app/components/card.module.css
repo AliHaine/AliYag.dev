@@ -1,13 +1,8 @@
 .card {
     background-color: red;
-    width: 800px;
-    height: 500px;
-    padding: 20px;
-}
-
-.line {
-    display: flex;
-
+    width: 300px;
+    height: 250px;
+    padding: 10px;
 }
 
 .topContent {
@@ -24,6 +19,18 @@
 }
 
 .midContent img {
-    width: 40%;
+    width: 90%;
     height: 35%;
+}
+
+.botContent {
+    display: flex;
+}
+
+@media (min-width: 1024px) {
+    .card {
+        width: 800px;
+        height: 500px;
+        padding: 20px;
+    }
 }

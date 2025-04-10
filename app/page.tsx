@@ -55,7 +55,6 @@ export default function Home() {
         </div>
         <div id={styles.cards}>
           <Card />
-          <Card />
         </div>
       </div>
     </main>

@@ -1,30 +1,26 @@
 .main {
-  height: 98%;
   display: flex;
   flex-direction: column;
+  gap: 25px;
 }
 
 #top {
-  height: 44%;
   display: flex;
-  align-items: end;
 }
 
-@media (max-width: 768px) {
-  #top {
-    height: auto;
-    align-items: normal;
-    justify-content: initial;
+@media (min-width: 1024px) {
+  .main {
+    height: 98%;
   }
-}
 
-#bot {
-  height: 44%;
-}
+  #top {
+    height: 44%;
+    display: flex;
+    align-items: end;
+  }
 
-@media (max-width: 768px) {
   #bot {
-    height: auto;
+    height: 44%;
   }
 }
 
@@ -32,65 +28,37 @@
 
 #topContent {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 100px;
   color: var(--color-two);
 }
 
-@media (max-width: 768px) {
-  #topContent {
-    flex-direction: column;
-    justify-content: initial;
-
-  }
-}
-
 #topLeftContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #mainTitle {
-  font-size: 4.9vw;
-}
-
-@media (max-width: 768px) {
-  #mainTitle {
-    font-size: 5em;
-  }
+  font-size: 4em;
 }
 
 #subTitle {
-  font-size: 1.4vw;
-  padding-bottom: 4%;
-}
-
-@media (max-width: 768px) {
-  #subTitle {
-    font-size: 1.5em;
-  }
+  font-size: 1.5em;
 }
 
 #stats {
   display: flex;
-  gap: 1vw;
-}
+  justify-content: center;
+  gap: 3vw;
+  padding-top: 25px;
+  padding-bottom: 25px;
 
-@media (max-width: 768px) {
-  #stats {
-    justify-content: center;
-    gap: 3vw;
-  }
 }
 
 .stat {
   text-align: center;
-  font-size: 0.9vw;
-}
-
-@media (max-width: 768px) {
-  .stat {
-    font-size: 0.9em;
-  }
+  font-size: 0.9em;
 }
 
 .statValue {
@@ -103,25 +71,44 @@
 }
 
 #topRightContent {
-
-  width: 30%;
-}
-
-@media (max-width: 768px) {
-  #topRightContent {
-    width: 90%;
-  }
+  width: 90%;
 }
 
 #topDescription {
   color: var(--color-three);
-  font-size: 1.1vw;
+  font-size: 1.4em;
   opacity: 0.8;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 1024px) {
   #topDescription {
-    font-size: 1.4em;
+    font-size: 1.1vw;
+  }
+
+  #topRightContent {
+    width: 30%;
+  }
+
+  .stat {
+    font-size: 0.9vw;
+  }
+
+  #stats {
+    gap: 1vw;
+  }
+
+  #mainTitle {
+    font-size: 4.9vw;
+  }
+
+  #subTitle {
+    font-size: 1.4vw;
+  }
+
+  #topContent {
+    justify-content: center;
+    flex-direction: initial;
+    gap: 100px;
   }
 }
 
@@ -158,8 +145,16 @@
 }
 
 #cards {
+  margin-top: 25px;
+  margin-bottom: 25px;
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 100px;
-  margin-top: 50px;
+}
+
+@media (min-width: 1024px) {
+  #cards {
+    gap: 100px;
+    margin-top: 50px;
+  }
 }
