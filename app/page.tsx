@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./page.module.css";
 import Card from "@/app/components/card";
 
@@ -39,11 +38,7 @@ export default function Home() {
               <br/>
               explicabo vel itaque itaque aut sunt voluptatem non quae officia.
               Et provident pariatur At veniam nihil sed ullam quia ut galisum aperiam et possimus impedit ut iure
-              inventore ad rerum
-              <br/>
-              <br/>
-              laudantium. Est omnis quisquam sed accusamus galisum ex sapiente repellendus ut sint dolorum id similique
-              dolores est impedit harum et tempora fuga.</p>
+              inventore ad rerum .</p>
           </div>
         </div>
       </div>
@@ -55,7 +50,10 @@ export default function Home() {
         </div>
         <div id={styles.cards}>
           <Card />
+          <Card />
+          <Card />
         </div>
+        <p id={styles.seeAllButton}>See all</p>
       </div>
     </main>
   );

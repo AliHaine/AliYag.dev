@@ -15,8 +15,11 @@ export default function Card() {
                 </p>
             </div>
             <div className={cardStyle.techContent}>
-                <div>C</div>
-                <div>Makefile</div>
+                <div className={cardStyle.tech}>C</div>
+                <div className={cardStyle.tech}>Makefile</div>
+                <div className={cardStyle.tech}>Angular</div>
+                <div className={cardStyle.tech}>Flask</div>
+                <div className={cardStyle.tech}>Python</div>
             </div>
         </div>
     )
