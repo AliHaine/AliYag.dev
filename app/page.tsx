@@ -51,9 +51,8 @@ export default function Home() {
         <div id={styles.cards}>
           <Card />
           <Card />
-          <Card />
         </div>
-        <p id={styles.seeAllButton}>See all</p>
+        <a id={styles.seeAllButton} href="#">See all</a>
       </div>
     </main>
   );

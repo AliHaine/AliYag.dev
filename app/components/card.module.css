@@ -47,8 +47,32 @@
 @media (min-width: 1024px) {
     .card {
         width: 800px;
-        height: 500px;
-        padding: 20px;
+        padding: 15px;
+    }
+
+    .card .topContent img {
+        transform: translate(0, 0);
+        transition: transform 0.5s;
+    }
+
+    .card:hover .topContent img {
+        transform: translate(8px, -8px);
+    }
+
+    .topContent {
+        font-size: 1.7em;
+    }
+
+    .topContent img {
+        width: 32px;
+    }
+
+    .cardDescription {
+        font-size: 1.3em;
+    }
+
+    .techContent {
+        font-size: 1.4em;
     }
 }
 
