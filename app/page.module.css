@@ -36,7 +36,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--color-two);
+  color: rgb(var(--color-two));
 }
 
 #topLeftContent {
@@ -46,7 +46,7 @@
 }
 
 #mainTitle {
-  font-size: 4em;
+  font-size: 3.5em;
 }
 
 #subTitle {
@@ -72,8 +72,7 @@
 }
 
 .statTitle {
-  color: var(--color-three);
-  opacity: 0.8;
+  color: rgb(var(--color-three));
 }
 
 #topRightContent {
@@ -81,9 +80,8 @@
 }
 
 #topDescription {
-  color: var(--color-three);
+  color: rgb(var(--color-three));
   font-size: 1.4em;
-  opacity: 0.8;
 }
 
 @media (min-width: 1024px) {
@@ -127,21 +125,18 @@
 }
 
 .mainButtons {
-  color: var(--color-three);
+  color: rgb(var(--color-three));
   padding: 5px;
   font-weight: bold;
-  background-color: var(--color-two);
+  background-color: rgb(var(--color-two));
   font-size: 1.5em;
   border: none;
   width: 100px;
 }
 
-.mainButtons:enabled {
-
-}
-
 .mainButtons:disabled {
-  opacity: 0.5;
+  background-color: rgba(var(--color-two), 0.5);
+  color: rgba(var(--color-three), 0.5);
 }
 
 .leftMainButton {
@@ -163,14 +158,13 @@
 }
 
 #seeAllButton {
-  color: var(--color-three);
+  color: rgb(var(--color-three));
   text-align: center;
 }
 
 @media (min-width: 768px) {
   #cards {
     flex-direction: row;
-
   }
 }
 
@@ -178,5 +172,19 @@
   #cards {
     gap: 100px;
     margin-top: 50px;
+  }
+
+  #seeAllButton {
+    align-self: center; /* Shrinks to content size */
+    width: auto;
+    font-size: 1.8em;
+  }
+
+  #seeAllButton:hover {
+    color: rgb(var(--color-two));
+  }
+
+  .mainButtons:disabled:hover {
+    color: rgb(var(--color-three));
   }
 }

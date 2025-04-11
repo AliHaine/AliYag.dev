@@ -2,10 +2,10 @@
 @import "https://fonts.googleapis.com/css2?family=Jua&display=swap";
 
 :root {
-  --color-background: #0F172A;
+  --color-background: 15, 23, 42;
   --color-one: #374151;
-  --color-two: #516FA0;
-  --color-three: #E5E7EB;
+  --color-two: 81, 111, 160;
+  --color-three: 229, 231, 235;
 }
 
 html,
@@ -15,7 +15,7 @@ body {
 }
 
 body {
-  background-color: var(--color-background);
+  background-color: rgb(var(--color-background));
 }
 
 * {

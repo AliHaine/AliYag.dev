@@ -1,13 +1,19 @@
 #footer {
     text-align: center;
-    color: var(--color-three);
+    color: rgb(var(--color-three));
     font-size: 0.8em;
 }
 
 .a {
-    color: var(--color-two);
+    color: rgb(var(--color-two));
 }
 
 .a:hover {
-    color: var(--color-three);
+    color: rgb(var(--color-three));
+}
+
+@media (min-width: 1024px) {
+    #footer {
+        font-size: 1.4em;
+    }
 }
