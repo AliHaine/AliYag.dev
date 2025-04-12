@@ -3,8 +3,8 @@ import {Inter, Jua} from "next/font/google";
 import "./globals.css";
 import Footer from "@/app/components/footer";
 import Social from "@/app/components/social";
+import Mouse from "@/app/components/mouse";
 
-// Using the `Inter` font with Next.js font optimization
 const inter = Inter({
   subsets: ['latin'],
   weight: '400',
@@ -28,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} ${jua.className}`}>
+        <Mouse />
         {children}
         <Footer />
         <Social />

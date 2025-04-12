@@ -30,7 +30,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div id={styles.topRightContent}>
+          <div id={styles.topRightContent} className={styles.revealText}>
             <p id={styles.topDescription}>Lorem ipsum dolor sit amet. Eos dicta numquam non fugiat voluptatibus et
               quibusdam minus est explicabo assumenda. In
               animi quod ab mollitia corporis est officia quaerat ut pariatur
