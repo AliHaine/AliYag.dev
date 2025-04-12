@@ -1,32 +1,36 @@
 .main {
   display: flex;
   flex-direction: column;
+  gap: 25px;
+  margin: 25px;
+
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #top {
-  display: flex;
 }
 
 #bot {
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  margin: 25px;
+
 }
 
 @media (min-width: 1024px) {
   .main {
-    height: 98%;
+    flex-grow: 1;
   }
 
   #top {
-    height: 44%;
     display: flex;
     align-items: end;
   }
 
   #bot {
-    height: 44%;
   }
 }
 
@@ -59,7 +63,6 @@
   gap: 3vw;
   padding-top: 25px;
   padding-bottom: 25px;
-
 }
 
 .stat {
@@ -93,6 +96,12 @@
 }
 
 @media (min-width: 1024px) {
+  .main {
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+  }
+
   #topDescription {
     font-size: 1.1vw;
     opacity: 0.8;
@@ -128,7 +137,6 @@
 /*------------------BOT STYLES----------------------*/
 
 #botButtons {
-  margin-top: 2vw;
   display: flex;
   justify-content: center;
 }
@@ -167,8 +175,9 @@
 }
 
 #seeAllButton {
-  color: rgb(var(--color-three));
+  color: rgb(var(--color-two));
   text-align: center;
+  font-size: 1.5em;
 }
 
 @media (min-width: 768px) {
@@ -180,7 +189,6 @@
 @media (min-width: 1024px) {
   #cards {
     gap: 100px;
-    margin-top: 50px;
   }
 
   #seeAllButton {
@@ -190,7 +198,7 @@
   }
 
   #seeAllButton:hover {
-    color: rgb(var(--color-two));
+    color: rgb(var(--color-three));
   }
 
   .mainButtons:disabled:hover {

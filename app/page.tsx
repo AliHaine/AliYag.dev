@@ -43,17 +43,18 @@ export default function Home() {
         </div>
       </div>
 
+      <div id={styles.botButtons}>
+        <button className={`${styles.mainButtons} ${styles.leftMainButton}`}>Projects</button>
+        <button disabled={true} className={`${styles.mainButtons} ${styles.rightMainButton}`}>Blogs</button>
+      </div>
+
       <div id={styles.bot}>
-        <div id={styles.botButtons}>
-          <button className={`${styles.mainButtons} ${styles.leftMainButton}`}>Projects</button>
-          <button disabled={true} className={`${styles.mainButtons} ${styles.rightMainButton}`}>Blogs</button>
-        </div>
         <div id={styles.cards}>
           <Card />
           <Card />
         </div>
-        <a id={styles.seeAllButton} href="#">See all</a>
       </div>
+      <a id={styles.seeAllButton} href="#">See all</a>
     </main>
   );
 }
