@@ -1,0 +1,11 @@
+#alldisplayMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(var(--color-three));
+}
+
+.itemRow {
+    display: flex;
+}
