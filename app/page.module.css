@@ -135,37 +135,6 @@
 }
 
 /*------------------BOT STYLES----------------------*/
-
-#botButtons {
-  display: flex;
-  justify-content: center;
-}
-
-.mainButtons {
-  color: rgb(var(--color-three));
-  padding: 5px;
-  font-weight: bold;
-  background-color: rgb(var(--color-two));
-  font-size: 1.5em;
-  border: none;
-  width: 100px;
-}
-
-.mainButtons:disabled {
-  background-color: rgba(var(--color-two), 0.5);
-  color: rgba(var(--color-three), 0.5);
-}
-
-.leftMainButton {
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-}
-
-.rightMainButton {
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-
 #cards {
   display: flex;
   align-items: center;
@@ -198,10 +167,6 @@
   }
 
   #seeAllButton:hover {
-    color: rgb(var(--color-three));
-  }
-
-  .mainButtons:disabled:hover {
     color: rgb(var(--color-three));
   }
 }

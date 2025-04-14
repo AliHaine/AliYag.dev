@@ -1,5 +1,6 @@
 import styles from "./page.module.css";
 import Card from "@/app/components/card";
+import MainButtons from "@/app/components/mainbuttons";
 
 export default function Home() {
   return (
@@ -43,10 +44,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id={styles.botButtons}>
-        <button className={`${styles.mainButtons} ${styles.leftMainButton}`}>Projects</button>
-        <button disabled={true} className={`${styles.mainButtons} ${styles.rightMainButton}`}>Blogs</button>
-      </div>
+      <MainButtons/>
 
       <div id={styles.bot}>
         <div id={styles.cards}>
