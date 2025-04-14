@@ -1,0 +1,27 @@
+#pageMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: rgb(var(--color-three));
+    font-size: 1.5em;
+}
+
+.test {
+    background-color: red;
+}
+
+.articleMain {
+    max-width: 60%;
+}
+
+
+.articleMain img {
+    max-width: 40%;
+    max-height: 40%;
+}
+
+.articleMain h1, .articleMain h2, .articleMain h3 {
+    margin: 10px;
+    line-height: normal;
+}
