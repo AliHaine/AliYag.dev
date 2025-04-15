@@ -1,6 +1,7 @@
 .main {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 25px;
   margin: 25px;
 
@@ -143,12 +144,6 @@
   gap: 25px;
 }
 
-#seeAllButton {
-  color: rgb(var(--color-two));
-  text-align: center;
-  font-size: 1.5em;
-}
-
 @media (min-width: 768px) {
   #cards {
     flex-direction: row;
@@ -158,15 +153,5 @@
 @media (min-width: 1024px) {
   #cards {
     gap: 100px;
-  }
-
-  #seeAllButton {
-    align-self: center; /* Shrinks to content size */
-    width: auto;
-    font-size: 1.8em;
-  }
-
-  #seeAllButton:hover {
-    color: rgb(var(--color-three));
   }
 }

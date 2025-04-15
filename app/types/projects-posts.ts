@@ -4,6 +4,7 @@ export type PostItem = {
     date: string
     category: string
     shortDescription: string
+    data: string[]
 }
 
 export type ProjectItem = {
@@ -12,5 +13,5 @@ export type ProjectItem = {
     date: string
     category: string
     shortDescription: string
-    stacks: string[]
+    data: string[]
 }

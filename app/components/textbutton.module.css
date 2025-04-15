@@ -1,0 +1,17 @@
+#button {
+    color: rgb(var(--color-two));
+    text-align: center;
+    font-size: 1.5em;
+}
+
+@media (min-width: 1024px) {
+    #button {
+        align-self: center; /* Shrinks to content size */
+        width: auto;
+        font-size: 1.8em;
+    }
+
+    #button:hover {
+        color: rgb(var(--color-three));
+    }
+}

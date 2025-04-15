@@ -1,11 +1,29 @@
-#alldisplayMain {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+#mainAllDisplayer {
     color: rgb(var(--color-three));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+#projectsGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
 }
 
 .itemRow {
     display: flex;
+}
+
+@media (min-width: 1024px) {
+    #projectsGrid {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-gap: 32px;
+        justify-content: center;
+        color: rgb(var(--color-three));
+    }
 }

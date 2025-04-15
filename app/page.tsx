@@ -1,6 +1,8 @@
 import styles from "./page.module.css";
 import Card from "@/app/components/card";
 import MainButtons from "@/app/components/mainbuttons";
+import {getSortedItems} from "@/app/libs/projects-blogs";
+import TextButton from "@/app/components/textbutton";
 
 export default function Home() {
   return (
@@ -48,11 +50,11 @@ export default function Home() {
 
       <div id={styles.bot}>
         <div id={styles.cards}>
-          <Card />
-          <Card />
+          <Card item={getSortedItems("projects")[0]} />
+          <Card item={getSortedItems("projects")[1]} />
         </div>
       </div>
-      <a id={styles.seeAllButton} href="#">See all</a>
+      <TextButton href="/allprojects" text="See all" />
     </main>
   );
 }

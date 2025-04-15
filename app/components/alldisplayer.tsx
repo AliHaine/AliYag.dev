@@ -1,19 +1,17 @@
 import {PostItem, ProjectItem} from "@/app/types/projects-posts";
 import allPlayerStyle from "./alldisplayer.module.css";
-import Link from "next/link";
+import Card from "@/app/components/card";
+import TextButton from "@/app/components/textbutton";
 
 export default function AllDisplayer({item}: {item: ProjectItem[] | PostItem[] }) {
     return (
-        <section id={allPlayerStyle.alldisplayMain}>
-            <div>{item.map(item => (
-                <Link key={item.id} href={`/project/${item.id}`}>
-                    <div className={allPlayerStyle.itemRow} key={item.id}>
-                        <div>{item.date}</div>
-                        <div>{item.title}</div>
-                    </div>
-                </Link>
-            ))}
-            </div>
-        </section>
+        <div id={allPlayerStyle.mainAllDisplayer} className="mainPadding">
+            <TextButton href="/" text="Back to home" />
+            <section id={allPlayerStyle.projectsGrid}>
+                {item.map(item => (
+                    <Card key={item.id} item={item} />
+                ))}
+            </section>
+        </div>
     );
 }
