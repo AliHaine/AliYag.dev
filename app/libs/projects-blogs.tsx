@@ -4,6 +4,8 @@ import path from "path"
 import moment from "moment"
 import remarkRehype from 'remark-rehype';
 import rehypeRaw from 'rehype-raw';
+import remarkGfm from "remark-gfm";
+
 import rehypeStringify from 'rehype-stringify';
 import { remark } from 'remark'
 
@@ -57,6 +59,7 @@ export const getItemData = async (type: string, itemId: string) => {
     const matterResult = matter(fileContents);
 
     const processedContent = await remark().use(remarkRehype, { allowDangerousHtml: true }).
+    use(remarkGfm).
     use(rehypeRaw).
     use(rehypeStringify).
     process(matterResult.content);

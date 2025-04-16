@@ -10,6 +10,14 @@
     max-width: 90%;
 }
 
+img.img-small {
+    width: 20px;
+}
+
+.articleMain p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
 .articleMain img {
     max-width: 80%;
@@ -27,11 +35,28 @@
     }
 
     .articleMain img {
-        max-width: 40%;
+        max-width: 80%;
         max-height: 40%;
     }
 
     #pageMain {
         font-size: 1.5em;
     }
+}
+
+.markdown table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.markdown th,
+.markdown td {
+    border: 1px solid rgb(var(--color-three));
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.markdown th {
+    text-align: center;
 }

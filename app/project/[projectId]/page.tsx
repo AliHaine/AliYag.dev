@@ -11,7 +11,7 @@ const Project = async ({params}: { params: { projectId: string} }) => {
             <TextButton href="/allprojects" text="Back to projects list" />
 
             <article
-                className={pageStyle.articleMain}
+                className={`${pageStyle.articleMain} ${pageStyle.markdown}`}
                 dangerouslySetInnerHTML={{ __html: project.contentHtml }}
             />
         </div>);
