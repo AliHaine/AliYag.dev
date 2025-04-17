@@ -7,7 +7,11 @@ shortDescription: "2.5D game using Raycasting without GameEngine"
 data: ["c",  "Makefile", "MLX"]
 ---
 
+
 # Cub3d - Minecraft : セグメンテーションフォルトのないプログラムは、鋭い剣のように正確に使える。
+
+Stacks: ![tech icon](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white) ![tech icon](https://img.shields.io/badge/Makefile-000000?style=for-the-badge&logo=gnubash&logoColor=white)
+
 #### Cub3d is a project at the school 42. We work on it in groups of 2 students. The project involves creating a game similar Wolfeinstein 3D (1992), using Raycasting to develop a "Fake" 3d game (2.5D) with a 2D map. We implement it in C and whithout the use of any GameEngine; instead, we had to utilize MLX as the graphic lib (similar to SDL but significantly less powerful).
 
 <img src="https://i.goopics.net/gn5v60.png" style="max-width:40%;" />
@@ -105,7 +109,7 @@ Then I passed the wanted elements to the function:
 The main issues that I encountered is with the 'depth function', imagine that simple (and typical) scenario:
 Func1 call Func2, which call Func3, which call Func4 [...]. If only Func4 needs, for example to acces a Block, I had to pass the entire blocks_list through Func1, Func2 and Func3 just for deliver it to Func4.. Not only is this an inneficient coding practice, but it also breaks the encapsulation concept, as I had to send the entire blocks_list for getting a Block though X Func. And it's even worse if I pass the Core Struct directly everywhere..
 
-[![Image](https://i.goopics.net/r0x9jf.png)](https://goopics.net/i/r0x9jf)
+![Depth graph struct image](/item_images/cub3d/DepthGraph.png)
 
 To resolve this issue, I used global static variables in an Accessor file (block_accessor.c..), to facilitate acces to the required element from anywhere. These global static variables are specifically used for fundamental concepts that are frequently utilized in various part of the program, such as Blocks or Items. Here are some functions that work with the global static variable of Block in the accessor
 

@@ -1,8 +1,8 @@
 import cardStyle from "./card.module.css"
-import {PostItem, ProjectItem} from "@/app/types/projects-posts";
+import {Item} from "@/app/types/item";
 import Link from "next/link";
 
-export default function Card({item}: {item:  ProjectItem | PostItem }) {
+export default function Card({item}: {item:  Item }) {
     return (
         <Link key={item.id} href={`/project/${item.id}`}>
             <div className={cardStyle.card} >
@@ -12,7 +12,7 @@ export default function Card({item}: {item:  ProjectItem | PostItem }) {
                     <img src="/ArrowRotateIcon.png"  alt='Arrow icon'/>
                 </div>
                 <div className={cardStyle.midContent}>
-                    <img src="/miniatures/cub3d.png" alt='Arrow icon'/>
+                    <img src="/item_images/cub3d/NetherMain.gif/" alt='Arrow icon'/>
                     <p className={cardStyle.cardDescription}>{item.shortDescription}</p>
                 </div>
                 <div className={cardStyle.techContent}>

@@ -105,7 +105,6 @@
 
   #topDescription {
     font-size: 1.1vw;
-    opacity: 0.8;
   }
 
   #topRightContent {
@@ -136,6 +135,13 @@
 }
 
 /*------------------BOT STYLES----------------------*/
+
+#myWork {
+  color: rgb(var(--color-three));
+  font-size: 1.9em;
+}
+
+
 #cards {
   display: flex;
   align-items: center;

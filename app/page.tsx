@@ -1,6 +1,5 @@
 import styles from "./page.module.css";
 import Card from "@/app/components/card";
-import MainButtons from "@/app/components/mainbuttons";
 import {getSortedItems} from "@/app/libs/projects-blogs";
 import TextButton from "@/app/components/textbutton";
 
@@ -46,7 +45,7 @@ export default function Home() {
         </div>
       </div>
 
-      <MainButtons/>
+      <div id={styles.myWork}>My Work</div>
 
       <div id={styles.bot}>
         <div id={styles.cards}>

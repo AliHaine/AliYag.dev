@@ -9,12 +9,12 @@ import remarkGfm from "remark-gfm";
 import rehypeStringify from 'rehype-stringify';
 import { remark } from 'remark'
 
-import type { PostItem, ProjectItem } from "../types/projects-posts"
+import type { Item } from "../types/item"
 
 const projectDirectory = path.join(process.cwd(), "projects");
 const blogDirectory = path.join(process.cwd(), "blogs");
 
-export const getSortedItems = (type: string): ProjectItem[] | PostItem[] => {
+export const getSortedItems = (type: string): Item[] => {
     let fileNames;
     if (type == 'projects')
         fileNames = fs.readdirSync(projectDirectory);

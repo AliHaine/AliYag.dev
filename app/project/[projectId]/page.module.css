@@ -1,13 +1,10 @@
 #pageMain {
+    padding: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     color: rgb(var(--color-three));
-}
-
-.articleMain {
-    max-width: 90%;
 }
 
 img.img-small {

@@ -1,9 +1,9 @@
-import {PostItem, ProjectItem} from "@/app/types/projects-posts";
+import {Item} from "@/app/types/item";
 import allPlayerStyle from "./alldisplayer.module.css";
 import Card from "@/app/components/card";
 import TextButton from "@/app/components/textbutton";
 
-export default function AllDisplayer({item}: {item: ProjectItem[] | PostItem[] }) {
+export default function AllDisplayer({item}: {item: Item[] }) {
     return (
         <div id={allPlayerStyle.mainAllDisplayer} className="mainPadding">
             <TextButton href="/" text="Back to home" />
