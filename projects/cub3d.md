@@ -5,7 +5,7 @@ imgSrc: "/miniatures/cub3d.png"
 category: "dev"
 date: "02-04-2023"
 shortDescription: "2.5D game using Raycasting without GameEngine"
-data: ["c",  "Makefile", "MLX"]
+data: ["C",  "Makefile"]
 ---
 
 

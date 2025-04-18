@@ -1,7 +1,12 @@
 .main {
-    display: flex;
-    justify-content: space-between;
-    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid rgb(var(--color-two));
+    border-radius: 10px;
+}
+
+.main div {
+    padding: 3px;
 }
 
 .techContent {

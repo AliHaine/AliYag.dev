@@ -5,13 +5,19 @@ import InlineCard from "@/app/components/InlineCard";
 
 export default function AllDisplayer({item}: {item: Item[] }) {
     return (
-        <div id={allPlayerStyle.mainAllDisplayer} className="mainPadding">
+        <section id={allPlayerStyle.mainAllDisplayer} className="mainPadding">
             <TextButton href="/" text="Back to home" />
-            <section id={allPlayerStyle.projectsGrid}>
+            <div id={allPlayerStyle.projectsGrid}>
+                <div id={allPlayerStyle.titleRow}>
+                    <div>Type</div>
+                    <div>Year</div>
+                    <div>Name</div>
+                    <div>Main stack</div>
+                </div>
                 {item.map(item => (
                     <InlineCard key={item.id} item={item} />
                 ))}
-            </section>
-        </div>
+            </div>
+        </section>
     );
 }
