@@ -7,7 +7,7 @@ const Project = async ({params}: { params: { projectId: string} }) => {
 
     return (
         <div id={pageStyle.pageMain}>
-            <TextButton href="/allprojects" text="Back to projects list" />
+            <TextButton href="/allprojects" text="Back to work list" />
 
             <article
                 className={`${pageStyle.articleMain} ${pageStyle.markdown}`}

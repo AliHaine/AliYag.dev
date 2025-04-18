@@ -1,0 +1,13 @@
+.main {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.techContent {
+    display: flex;
+}
+
+.shortDescription {
+    display: none;
+}

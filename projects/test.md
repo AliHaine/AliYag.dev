@@ -1,5 +1,6 @@
 ---
 title: "Test"
+type: "Project"
 imgSrc: "path"
 category: "dev"
 date: "02-04-2023"

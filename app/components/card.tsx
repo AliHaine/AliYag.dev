@@ -2,7 +2,7 @@ import cardStyle from "./card.module.css"
 import {Item} from "@/app/types/item";
 import Link from "next/link";
 
-export default function Card({item}: {item:  Item }) {
+export default function Card({item}: {item: Item }) {
     return (
         <Link key={item.id} href={`/project/${item.id}`}>
             <div className={cardStyle.card} >

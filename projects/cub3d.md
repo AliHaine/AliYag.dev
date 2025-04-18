@@ -1,5 +1,6 @@
 ---
 title: "Cubd3D"
+type: "Project"
 imgSrc: "/miniatures/cub3d.png"
 category: "dev"
 date: "02-04-2023"

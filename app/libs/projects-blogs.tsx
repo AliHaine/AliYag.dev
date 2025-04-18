@@ -32,9 +32,11 @@ export const getSortedItems = (type: string): Item[] => {
 
         return {
             id,
+            type: matterResult.data.type,
             title: matterResult.data.title,
             imgSrc: matterResult.data.imgSrc,
-            date: matterResult.data.date,
+            fullDate: matterResult.data.date,
+            date: matterResult.data.date.slice(6),
             category: matterResult.data.category,
             shortDescription: matterResult.data.shortDescription,
             data: matterResult.data.data,
