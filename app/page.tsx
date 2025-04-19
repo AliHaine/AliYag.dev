@@ -2,6 +2,7 @@ import styles from "./page.module.css";
 import Card from "@/app/components/card";
 import {getSortedItems} from "@/app/libs/projects-blogs";
 import TextButton from "@/app/components/textbutton";
+import {getGithubContributions, getGitHubStars, getServerRunning, getWorkPosts} from "@/app/libs/StatsApi";
 
 export default function Home() {
   return (
@@ -15,19 +16,19 @@ export default function Home() {
             <div id={styles.stats}>
               <div className={styles.stat}>
                 <div className={styles.statTitle}>Github contributions</div>
-                <div className={styles.statValue}>547</div>
+                <div className={styles.statValue}>{getGithubContributions()}</div>
               </div>
               <div className={styles.stat}>
                 <div className={styles.statTitle}>Github stars</div>
-                <div className={styles.statValue}>17</div>
+                <div className={styles.statValue}>{getGitHubStars()}</div>
               </div>
               <div className={styles.stat}>
                 <div className={styles.statTitle}>Servers running</div>
-                <div className={styles.statValue}>67</div>
+                <div className={styles.statValue}>{getServerRunning()}</div>
               </div>
               <div className={styles.stat}>
                 <div className={styles.statTitle}>Blog posts</div>
-                <div className={styles.statValue}>7</div>
+                <div className={styles.statValue}>{getWorkPosts()}</div>
               </div>
             </div>
           </div>
