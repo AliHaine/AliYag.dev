@@ -16,3 +16,13 @@
 .shortDescription {
     display: none;
 }
+
+@media (min-width: 1024px) {
+    .main {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .shortDescription {
+        display: block;
+    }
+}

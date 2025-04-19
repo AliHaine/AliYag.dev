@@ -10,6 +10,8 @@
 .img {
     width: 32px;
     height: 32px;
+    display: block;
+    background-color: rgb(var(--color-two));
 }
 
 @media (min-width: 1024px) {
@@ -24,6 +26,7 @@
     }
 
     .img:hover {
-        filter: hue-rotate(180deg) brightness(1.5);
+        background-color: rgb(var(--color-three));
+
     }
 }
