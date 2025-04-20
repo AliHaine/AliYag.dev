@@ -11,21 +11,15 @@ import { remark } from 'remark'
 
 import type { Item } from "../types/item"
 
-const projectDirectory = path.join(process.cwd(), "projects");
-const blogDirectory = path.join(process.cwd(), "blogs");
+const itemsDirectory = path.join(process.cwd(), "items");
 
-export const getSortedItems = (type: string): Item[] => {
-    let fileNames;
-    if (type == 'projects')
-        fileNames = fs.readdirSync(projectDirectory);
-    else
-        fileNames = fs.readdirSync(blogDirectory);
-
+export const getSortedItems = (): Item[] => {
+    const fileNames = fs.readdirSync(itemsDirectory);
 
     const allItems = fileNames.map((fileName) => {
         const id = fileName.replace(/\.md$/, "")
 
-        const fullPath = path.join(projectDirectory, fileName)
+        const fullPath = path.join(itemsDirectory, fileName)
         const fileContents = fs.readFileSync(fullPath, "utf-8")
 
         const matterResult = matter(fileContents)
@@ -51,12 +45,8 @@ export const getSortedItems = (type: string): Item[] => {
     });
 }
 
-export const getItemData = async (type: string, itemId: string) => {
-    let fullPath;
-    if (type == 'projects')
-        fullPath = path.join(projectDirectory, itemId + ".md");
-    else
-        fullPath = path.join(blogDirectory, itemId + ".md");
+export const getItemData = async (itemId: string) => {
+    const fullPath = path.join(itemsDirectory, itemId + ".md");
     const fileContents = fs.readFileSync(fullPath, "utf-8");
     const matterResult = matter(fileContents);
 
@@ -77,4 +67,9 @@ export const getItemData = async (type: string, itemId: string) => {
         shortDescription: matterResult.data.shortDescription,
         data: matterResult.data.data,
     }
+}
+
+export const getTotalItems = async () => {
+    const fileNames = fs.readdirSync(itemsDirectory);
+    return fileNames.length;
 }

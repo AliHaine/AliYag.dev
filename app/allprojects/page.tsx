@@ -1,8 +1,8 @@
-import {getSortedItems} from "../libs/projects-blogs"
+import {getSortedItems} from "../libs/ItemLoader"
 import AllDisplayer from "@/app/components/alldisplayer";
 
 export default function AllProjects() {
-    const projects = getSortedItems("projects");
+    const projects = getSortedItems();
 
     return (
         <AllDisplayer item={projects}></AllDisplayer>

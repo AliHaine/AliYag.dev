@@ -1,9 +1,9 @@
-import {getItemData} from "../../libs/projects-blogs"
+import {getItemData} from "../../libs/ItemLoader"
 import pageStyle from "./page.module.css"
 import TextButton from "@/app/components/textbutton";
 
 const Project = async ({params}: { params: { projectId: string} }) => {
-    const project = await getItemData("projects", params.projectId);
+    const project = await getItemData( params.projectId);
 
     return (
         <div id={pageStyle.pageMain}>

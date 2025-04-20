@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
 import Card from "@/app/components/card";
-import {getSortedItems} from "@/app/libs/projects-blogs";
+import {getSortedItems} from "@/app/libs/ItemLoader";
 import TextButton from "@/app/components/textbutton";
 import {getGithubContributions, getGitHubStars, getServerRunning, getWorkPosts} from "@/app/libs/StatsApi";
 
@@ -50,8 +50,8 @@ export default function Home() {
 
       <div id={styles.bot}>
         <div id={styles.cards}>
-          <Card item={getSortedItems("projects")[0]} />
-          <Card item={getSortedItems("projects")[1]} />
+          <Card item={getSortedItems()[0]} />
+          <Card item={getSortedItems()[1]} />
         </div>
       </div>
       <TextButton href="/allprojects" text="See all" />

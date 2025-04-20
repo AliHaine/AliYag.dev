@@ -11,18 +11,27 @@ img.img-small {
     width: 20px;
 }
 
+.articleMain a {
+    color: rgb(var(--color-two));
+}
+
 .articleMain p {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 .articleMain img {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.articleMain h1 {
+    text-align: center;
 }
 
 .articleMain h1, .articleMain h2, .articleMain h3 {
-    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     line-height: normal;
 }
 

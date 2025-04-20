@@ -3,7 +3,7 @@ title: "Cubd3D"
 type: "Project"
 imgSrc: "/miniatures/cub3d.png"
 category: "dev"
-date: "02-04-2023"
+date: "02/04/2023"
 shortDescription: "2.5D game using Raycasting without GameEngine"
 data: ["C",  "Makefile"]
 ---
