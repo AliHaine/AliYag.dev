@@ -33,15 +33,15 @@ export const getSortedItems = (): Item[] => {
             date: matterResult.data.date.slice(6),
             category: matterResult.data.category,
             shortDescription: matterResult.data.shortDescription,
-            data: matterResult.data.data,
+            tech: matterResult.data.tech,
         }
     });
 
     return allItems.sort((a, b) => {
         const format = "DD-MM-YYYY"
-        const dateOne = moment(a.date, format)
-        const dateTwo = moment(b.date, format)
-        return dateOne.diff(dateTwo);
+        const dateOne = moment(a.fullDate, format)
+        const dateTwo = moment(b.fullDate, format)
+        return dateTwo.diff(dateOne);
     });
 }
 
@@ -65,7 +65,7 @@ export const getItemData = async (itemId: string) => {
         date: matterResult.data.date,
         category: matterResult.data.category,
         shortDescription: matterResult.data.shortDescription,
-        data: matterResult.data.data,
+        tech: matterResult.data.tech,
     }
 }
 

@@ -10,7 +10,7 @@ export default function InlineCard({item}: {item: Item}) {
                 <div>{item.date}</div>
                 <div>{item.title}</div>
                 <div className={styles.shortDescription}>{item.shortDescription}</div>
-                <div className={styles.techContent}>{item.data.at(0)}</div>
+                <div className={styles.techContent}>{item.tech.at(0)}</div>
             </div>
         </Link>
     )

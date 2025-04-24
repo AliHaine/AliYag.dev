@@ -7,5 +7,5 @@ export type Item = {
     date: number
     category: string
     shortDescription: string
-    data: string[]
+    tech: string[]
 }

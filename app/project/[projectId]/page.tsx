@@ -12,12 +12,12 @@ const Project = async ({params}: { params: { projectId: string} }) => {
             <div id={pageStyle.header}>
                 <h1>{project.title}</h1>
                 <div id={pageStyle.techContent}>
-                    <div>
-                        <img src="/tech_icons/js.png" className="techIcon"/>
-                        <img src="/tech_icons/html5.png" className="techIcon"/>
-                        <img src="/tech_icons/css3.png" className="techIcon"/>
+                    <div id={pageStyle.techContainer}>
+                        {project.tech.map((tech: string) => (
+                            <img key={tech} src={`/tech_icons/${tech}.png`} className="techIcon" alt={`Icon of ${tech}`}/>
+                        ))}
                     </div>
-                    (JavaScript, HTML5, CSS3)
+                    ({project.tech.join(", ")})
                 </div>
             </div>
 

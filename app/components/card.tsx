@@ -16,7 +16,7 @@ export default function Card({item}: {item: Item }) {
                     <p className={cardStyle.cardDescription}>{item.shortDescription}</p>
                 </div>
                 <div className={cardStyle.techContent}>
-                    {item.data.map(item => (
+                    {item.tech.map(item => (
                         <div key={item} className={cardStyle.tech}>{item}</div>
                     ))}
                 </div>

@@ -5,10 +5,10 @@ imgSrc: "/item_images/cub3d/NetherMain.gif/"
 category: "dev"
 date: "02/04/2023"
 shortDescription: "2.5D game using Raycasting without GameEngine"
-data: ["C",  "Makefile"]
+tech: ["C"]
 ---
 
-#### Cub3d is a project at the school 42. We work on it in groups of 2 students. The project involves creating a game similar Wolfeinstein 3D (1992), using Raycasting to develop a "Fake" 3d game (2.5D) with a 2D map. We implement it in C and whithout the use of any GameEngine; instead, we had to utilize MLX as the graphic lib (similar to SDL but significantly less powerful).
+_Cub3d is a project at the school 42. We work on it in groups of 2 students. The project involves creating a game similar Wolfeinstein 3D (1992), using Raycasting to develop a "Fake" 3d game (2.5D) with a 2D map. We implement it in C and whithout the use of any GameEngine; instead, we had to utilize MLX as the graphic lib (similar to SDL but significantly less powerful)._
 
 <img src="https://i.goopics.net/gn5v60.png" style="max-width:40%;" />
 <img src="https://i.goopics.net/km1wsr.png" style="max-width:40%;" />

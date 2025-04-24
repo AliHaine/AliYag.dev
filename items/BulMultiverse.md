@@ -5,17 +5,12 @@ imgSrc: "/item_images/bulmultiverse/BulmultiverseIcon.png"
 category: "dev"
 date: "10/08/2024"
 shortDescription: "Ultra light and optimized world manager"
-data: ["Java"]
+tech: ["Java", "Minecraft"]
 ---
 
+_BulMultiverse is a minimalistic solution designed specifically for creating and managing Minecraft worlds with unparalleled efficiency. If you're looking for a no-frills, performance-optimized tool, this is the plugin for you. Read the full documentation here for a complete explanation of all features._
 
-# BulMultiverse
 <img src="/item_images/bulmultiverse/BulmultiverseIcon.png" style="max-width:20%; align-items: center" />
-
-15
-Stars
-
-Stack: ![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)
 
 [Download page](https://www.spigotmc.org/resources/118884/ "Click to download")
 
@@ -24,8 +19,6 @@ Stack: ![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo
 [Developer Api](https://github.com/BulPlugins/BulMultiverse/wiki/Dev-API "Click to code")
 
 [Discord server to get help](https://discord.gg/wxnTV68dX2 "Click to join")
-
-#### BulMultiverse is a minimalistic solution designed specifically for creating and managing Minecraft worlds with unparalleled efficiency. If you're looking for a no-frills, performance-optimized tool, this is the plugin for you. Read the full documentation here for a complete explanation of all features.
 
 ![Remember blocks image](/item_images/bulmultiverse/BulmultiverseComp.png)
 

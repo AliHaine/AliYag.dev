@@ -1,12 +1,14 @@
 ---
 title: "GameFarmer"
 type: "Project"
-imgSrc: "/item_images/gamefarmer/GameFarmerMain.png"
+imgSrc: "/item_images/gamefarmer/GameFarmerMain.gif"
 category: "dev"
 date: "04/04/2024"
 shortDescription: "farm simulation game without libs or framwork"
-data: ["JavaScript", "HTML", "CSS"]
+tech: ["JavaScript", "HTML", "CSS"]
 ---
+
+_This project is a game wrote without framework or external libraries. This game is a farm manager, player have to plant crops, build, manage animals, to recolt resources and make money. The main motivation for this project is to learn and increase skills in JavaScipt, HTML and CSS._
 
 ![Before image](/item_images/gamefarmer/GameFarmerMain.gif)
 
