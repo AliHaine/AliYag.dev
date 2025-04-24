@@ -10,8 +10,12 @@ data: ["Java"]
 
 
 # BulMultiverse
+<img src="/item_images/bulmultiverse/BulmultiverseIcon.png" style="max-width:20%; align-items: center" />
 
-Stack: [![Java](https://img.shields.io/badge/Java-%23ED8B00.svg?logo=openjdk&logoColor=white)](#)
+15
+Stars
+
+Stack: ![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)
 
 [Download page](https://www.spigotmc.org/resources/118884/ "Click to download")
 
@@ -21,7 +25,7 @@ Stack: [![Java](https://img.shields.io/badge/Java-%23ED8B00.svg?logo=openjdk&log
 
 [Discord server to get help](https://discord.gg/wxnTV68dX2 "Click to join")
 
-#### BulMultiverse is a minimalistic solution designed specifically for creating and managing Minecraft worlds with unparalleled efficiency. If you're looking for a no-frills, performance-optimized tool, this is the plugin for you. Read the full documentation here for a complete explanation of all features. Light weight multiverse plugin.
+#### BulMultiverse is a minimalistic solution designed specifically for creating and managing Minecraft worlds with unparalleled efficiency. If you're looking for a no-frills, performance-optimized tool, this is the plugin for you. Read the full documentation here for a complete explanation of all features.
 
 ![Remember blocks image](/item_images/bulmultiverse/BulmultiverseComp.png)
 
@@ -33,8 +37,9 @@ Stack: [![Java](https://img.shields.io/badge/Java-%23ED8B00.svg?logo=openjdk&log
 - Load/unload existing world.
 - List loaded worlds.
 - Disable invalid world names (e.g, "plugins")
-- Strong addons system
-- And that's all. This plugin does exactly what you want from a multiverse and world manager plugin—NOTHING MORE. No dozens of useless and unwanted features, and literally 0 EventHandlers. Light weight multiverse plugin
+- Strong addons system 
+
+And that's all. This plugin does exactly what you want from a multiverse and world manager plugin—NOTHING MORE. No dozens of useless and unwanted features, and literally 0 EventHandlers.
 
 ## Addons
 

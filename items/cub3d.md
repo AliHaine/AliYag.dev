@@ -1,17 +1,12 @@
 ---
 title: "Cubd3D"
 type: "Project"
-imgSrc: "/miniatures/cub3d.png"
+imgSrc: "/item_images/cub3d/NetherMain.gif/"
 category: "dev"
 date: "02/04/2023"
 shortDescription: "2.5D game using Raycasting without GameEngine"
 data: ["C",  "Makefile"]
 ---
-
-
-# Cub3d - Minecraft : セグメンテーションフォルトのないプログラムは、鋭い剣のように正確に使える。
-
-Stacks: ![tech icon](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white) ![tech icon](https://img.shields.io/badge/Makefile-000000?style=for-the-badge&logo=gnubash&logoColor=white)
 
 #### Cub3d is a project at the school 42. We work on it in groups of 2 students. The project involves creating a game similar Wolfeinstein 3D (1992), using Raycasting to develop a "Fake" 3d game (2.5D) with a 2D map. We implement it in C and whithout the use of any GameEngine; instead, we had to utilize MLX as the graphic lib (similar to SDL but significantly less powerful).
 

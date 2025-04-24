@@ -60,3 +60,8 @@ button {
 .mainPadding {
   padding: 32px;
 }
+
+.techIcon {
+  width: 48px;
+  max-height: 100% !important;
+}

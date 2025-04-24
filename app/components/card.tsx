@@ -12,7 +12,7 @@ export default function Card({item}: {item: Item }) {
                     <img src="/ArrowRotateIcon.png"  alt='Arrow icon'/>
                 </div>
                 <div className={cardStyle.midContent}>
-                    <img src="/item_images/cub3d/NetherMain.gif/" alt='Arrow icon'/>
+                    <img src={item.imgSrc} alt='Arrow icon'/>
                     <p className={cardStyle.cardDescription}>{item.shortDescription}</p>
                 </div>
                 <div className={cardStyle.techContent}>

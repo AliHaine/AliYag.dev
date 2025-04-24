@@ -23,7 +23,7 @@
 
 .midContent img {
     width: 100%;
-    height: 35%;
+    aspect-ratio: 2/1;
 }
 
 .cardDescription {

@@ -6,7 +6,7 @@
 
 @media (min-width: 1024px) {
     #button {
-        align-self: center; /* Shrinks to content size */
+        align-self: center;
         width: auto;
         font-size: 1.8em;
     }

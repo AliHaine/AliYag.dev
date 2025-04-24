@@ -9,9 +9,21 @@ const Project = async ({params}: { params: { projectId: string} }) => {
         <div id={pageStyle.pageMain}>
             <TextButton href="/allprojects" text="Back to work list" />
 
+            <div id={pageStyle.header}>
+                <h1>{project.title}</h1>
+                <div id={pageStyle.techContent}>
+                    <div>
+                        <img src="/tech_icons/js.png" className="techIcon"/>
+                        <img src="/tech_icons/html5.png" className="techIcon"/>
+                        <img src="/tech_icons/css3.png" className="techIcon"/>
+                    </div>
+                    (JavaScript, HTML5, CSS3)
+                </div>
+            </div>
+
             <article
                 className={`${pageStyle.articleMain} ${pageStyle.markdown}`}
-                dangerouslySetInnerHTML={{ __html: project.contentHtml }}
+                dangerouslySetInnerHTML={{__html: project.contentHtml}}
             />
         </div>);
 }
