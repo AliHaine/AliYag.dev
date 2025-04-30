@@ -1,6 +1,6 @@
 .main {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     border: 1px solid rgb(var(--color-two));
     border-radius: 10px;
 }
@@ -19,7 +19,7 @@
 
 @media (min-width: 1024px) {
     .main {
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .shortDescription {

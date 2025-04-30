@@ -13,9 +13,13 @@
 
 #titleRow {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     font-weight: bold;
     padding: 3px;
+}
+
+#shortDesc {
+    display: none;
 }
 
 @media (min-width: 1024px) {
@@ -24,5 +28,15 @@
         align-items: center;
         gap: 10px;
         color: rgb(var(--color-three));
+    }
+
+    #titleRow {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    #shortDesc {
+        display: block;
+        text-overflow: ellipsis;    white-space: nowrap;
+        overflow: hidden;
     }
 }

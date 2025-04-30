@@ -9,10 +9,10 @@ export default function AllDisplayer({item}: {item: Item[] }) {
             <TextButton href="/" text="Back to home" />
             <div id={allPlayerStyle.projectsGrid}>
                 <div id={allPlayerStyle.titleRow}>
-                    <div>Type</div>
                     <div>Year</div>
                     <div>Name</div>
                     <div>Main stack</div>
+                    <div id={allPlayerStyle.shortDesc}>Short description</div>
                 </div>
                 {item.map(item => (
                     <InlineCard key={item.id} item={item} />

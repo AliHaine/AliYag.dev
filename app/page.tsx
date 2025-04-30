@@ -50,7 +50,7 @@ export default function Home() {
 
       <div id={styles.bot}>
         <div id={styles.cards}>
-          <Card item={getSortedItems()[0]} />
+          <Card item={getSortedItems()[3]} />
           <Card item={getSortedItems()[1]} />
         </div>
       </div>
