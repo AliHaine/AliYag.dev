@@ -21,7 +21,7 @@ _This project is a game wrote without framework or external libraries. This game
 - When elements are recolted animation is displayed with the owned resource
 - Conditional harvesting and plant: Impossible to plant crops in a not plowed grass, to harvest a not fully grown crops, [...]
 - Multiple crops with animation, who each of them have different time to grow, different much of resource recolted
-- Map generated randomlly
+- Map generated randomly
 - Animals with AI
 - Builds
 

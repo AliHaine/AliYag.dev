@@ -12,7 +12,7 @@ export default function Card({item}: {item: Item }) {
                     <img src="/ArrowRotateIcon.png"  alt='Arrow icon'/>
                 </div>
                 <div className={cardStyle.midContent}>
-                    <img src={item.imgSrc} alt='Arrow icon'/>
+                    <img src={item.imgSrc} alt='Project image view'/>
                     <p className={cardStyle.cardDescription}>{item.shortDescription}</p>
                 </div>
                 <div className={cardStyle.techContent}>

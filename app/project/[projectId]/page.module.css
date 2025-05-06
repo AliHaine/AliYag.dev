@@ -17,13 +17,14 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-size: 0.8em
+    font-size: 0.8em;
 }
 
 #techContainer {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 4px;
 }
 
 img.img-small {
