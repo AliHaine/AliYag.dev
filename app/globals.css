@@ -34,12 +34,25 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   cursor: none;
-  color: inherit;
+  color: rgb(var(--color-two));
   text-decoration: none;
 }
 
 button {
   cursor: none;
+}
+
+.fontSizeMedium {
+  font-size: 1.5em;
+}
+
+.mainPadding {
+  padding: 32px;
+}
+
+.techIcon {
+  width: 48px;
+  max-height: 100% !important;
 }
 
 @media (min-width: 1024px) {
@@ -55,13 +68,12 @@ button {
             0px 0px 100px 10px #ff00ff,
             0px 0px 140px 10px #00ffff;
   }
-}
 
-.mainPadding {
-  padding: 32px;
-}
+  a:hover {
+    color: rgb(var(--color-three));
+  }
 
-.techIcon {
-  width: 48px;
-  max-height: 100% !important;
+  .fontSizeMedium {
+    font-size: 1.8em;
+  }
 }

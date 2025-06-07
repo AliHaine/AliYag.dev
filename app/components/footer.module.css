@@ -4,16 +4,8 @@
     font-size: 0.8em;
 }
 
-.a {
-    color: rgb(var(--color-two));
-}
-
 @media (min-width: 1024px) {
     #footer {
         font-size: 1.4em;
-    }
-
-    .a:hover {
-        color: rgb(var(--color-three));
     }
 }

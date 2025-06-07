@@ -1,16 +1,23 @@
 import {getItemData} from "../../libs/ItemLoader"
 import pageStyle from "./page.module.css"
-import TextButton from "@/app/components/textbutton";
+import Link from "next/link";
 
 const Project = async ({params}: { params: { projectId: string} }) => {
     const project = await getItemData( params.projectId);
 
     return (
         <div id={pageStyle.pageMain}>
-            <TextButton href="/allprojects" text="Back to work list" />
+            <Link className="fontSizeMedium" href="/allprojects">Back to work list</Link>
 
             <div id={pageStyle.header}>
                 <h1>{project.title}</h1>
+                {project.github &&
+                    <div>
+                        <a href={project.github} target="_blank" rel="noreferrer">
+                            Github page
+                        </a>
+                    </div>
+                }
                 <div id={pageStyle.techContent}>
                     <div id={pageStyle.techContainer}>
                         {project.tech.map((tech: string) => (

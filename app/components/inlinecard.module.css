@@ -3,6 +3,7 @@
     grid-template-columns: repeat(3, 1fr);
     border: 1px solid rgb(var(--color-two));
     border-radius: 10px;
+    color: rgb(var(--color-three));
 }
 
 .main div {

@@ -61,6 +61,7 @@ export const getItemData = async (itemId: string) => {
         itemId,
         contentHtml,
         title: matterResult.data.title,
+        github: matterResult.data.github,
         imgSrc: matterResult.data.imgSrc,
         date: matterResult.data.date,
         category: matterResult.data.category,

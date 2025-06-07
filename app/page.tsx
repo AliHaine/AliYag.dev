@@ -1,8 +1,8 @@
 import styles from "./page.module.css";
 import Card from "@/app/components/card";
 import {getSortedItems} from "@/app/libs/ItemLoader";
-import TextButton from "@/app/components/textbutton";
 import {getGithubContributions, getGitHubStars, getServerRunning, getWorkPosts} from "@/app/libs/StatsApi";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -54,7 +54,7 @@ export default function Home() {
           <Card item={getSortedItems()[1]} />
         </div>
       </div>
-      <TextButton href="/allprojects" text="See all" />
+      <Link className="fontSizeMedium" href="/allprojects">See all</Link>
     </main>
   );
 }

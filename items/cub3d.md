@@ -1,5 +1,6 @@
 ---
 title: "Cubd3D"
+github: "https://github.com/AliHaine/42_Cube3D"
 type: "Project"
 imgSrc: "/item_images/cub3d/NetherMain.gif/"
 category: "dev"

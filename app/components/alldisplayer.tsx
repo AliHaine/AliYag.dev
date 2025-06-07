@@ -1,12 +1,12 @@
 import {Item} from "@/app/types/item";
 import allPlayerStyle from "./alldisplayer.module.css";
-import TextButton from "@/app/components/textbutton";
 import InlineCard from "@/app/components/InlineCard";
+import Link from "next/link";
 
 export default function AllDisplayer({item}: {item: Item[] }) {
     return (
         <section id={allPlayerStyle.mainAllDisplayer} className="mainPadding">
-            <TextButton href="/" text="Back to home" />
+            <Link style={{"textAlign": "center"}} className="fontSizeMedium" href="/">Back to home</Link>
             <div id={allPlayerStyle.projectsGrid}>
                 <div id={allPlayerStyle.titleRow}>
                     <div>Year</div>

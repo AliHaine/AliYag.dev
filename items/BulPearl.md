@@ -1,5 +1,6 @@
 ---
 title: "BulPearl"
+github: "https://github.com/BulPlugins/BulPearl"
 type: "Project"
 imgSrc: "path"
 category: "dev"
@@ -10,67 +11,35 @@ tech: ["Java", "Minecraft"]
 
 _This Minecraft plugin modifies the behavior of the EnderPearl. Compatible with version 1.8 to the Latest Minecrat version._
 
-## Features
+**BulPearl** is a Minecraft plugin that lets you redefine how Ender Pearls work in your Minecraft server. Whether you're running a survival world, a creative hub, or a custom game mode, this plugin gives you control over the mechanics, cooldowns, crafting and more..
 
-- Modify the damage received when using an enderpearl
-- Allow to use EnderPearl in creative (for Minecraft version 1.8.8)
-- Prevent player in creative mode from dying when using ender pearl (For version 1.9 or higher)
-- Set a cooldown after using an EnderPearl
-- Dsiplay a visual of the cooldown in the action bar
-- Display a visual of the Cooldown in inventory. (for Minecraft version 1.14 or higher)
-- Disable the cooldown only in specific  worlds
-- Set a custom sound when player uses an EnderPearl
-- Prevent players from dying due to damage received from enderpearls (if the damage of an enderpearl would kill the player, they would not be killed and their health bar would be set to 0.5 hp)
-- Create a custom craft recipe for EnderPearl with a command and a custom Gui
-- Fully configurable
+Compatible with Minecraft **1.8 up to the latest version**, BulPearl is lightweight, easy to configure, and packed with features designed to improve both gameplay and server management.
 
-## Configuration file
 
-> Set the damage receveid whem a EnderPearl was used
 
-damage: 2.0
+## ✨ Main Features ✨
 
-> Define if EnderPearl can kill the players
+- **Custom Damage**: Change how much damage is dealt when using an Ender Pearl.
+- **Creative Mode Support**: Allow teleportation with pearls in creative mode, with protection from death.
+- **Cooldown System**: Add a delay between each use of an Ender Pearl — with action bar and inventory visuals (from 1.14+).
+- **World-Specific Rules**: Disable cooldowns in selected worlds for added flexibility.
+- **Death Prevention**: Prevent players from dying due to Ender Pearl damage; they’ll be saved at half a heart.
+- **Custom Sounds**: Play a sound effect when a player teleports using an Ender Pearl.
+- **Crafting GUI**: Add your own custom Ender Pearl recipe via a simple in-game interface.
+- **Fully Configurable**: Every feature can be turned on/off or adjusted through the config.
 
-can_kill: true
 
-> Define the cooldown in seconds beetwen each EnderPearl (0 = disable)
 
-cooldown: 30
+## 🛠 Use Cases
 
->Define the worlds where the cooldown are not enable
+BulPearl is great for:
 
-cooldown_blacklist_world: [world1, world2, example3]
+- Creative servers that want to allow teleportation without risks.
+- Survival or RPG servers that need more control over mobility tools.
+- Minigame environments where precise gameplay balancing is essential.
+- Any server owner who wants to enhance vanilla mechanics with quality-of-life features.
 
-> Define the sound who are played when a EnderPearl are use (let black to disable)
 
-sound: LEVEL_UP
 
-> Define all the messages and actionbar text. If you don't want a specifique message you can define nothing beetwen the two "" quotation
 
-enable_craft_creator: true
-
-> Control the craft creator menu. After creating your craft for EnderPearl, set this line to "false" to avoid loading unnecessary listeners,
-> which will enhance the performance.
-
-messages:   
-use_pearl: "&a[BulPearl] &eYou have used an Ender Pearl to teleport."
-on_cooldown: "&a[BulPearl] &cYou must wait %time% before using an Ender Pearl again."
-end_cooldown: "&a[BulPearl] &eYou can now use an Ender Pearl."
-craft_created: "&a[BulPearl] &eYou have created a craft for Ender Pearls."
-reload: "&a[BulPearl] Configuration reloaded."
-error_only_ingame: "&c[BulPearl] You can't use this command from the console."
-error_unknown: "&c[BulPearl] Unknown command."
-error_craft_creator_disabled: "&c[BulPearl] The craft creator is disabled in the config.yml."
-no_permission: "&c[BulPearl] You do not have permission to reload the configuration."
-actionbar:   
-on_cooldown: "&cYou can reuse an enderpearl in &e%time%s"   
-end_cooldown: "&aYou can now use again an EnderPearl"
-
-## Commands and permissions
-
-| Command        | Description                                                         | Permission |
-|----------------|---------------------------------------------------------------------| ------|
-| bulpearl craft | Open a inventory that allows the creation of a craft for EnderPearl | bulpearl.admin
-| bulpearl reload | Reload the configuration file                                       | bulpearl.admin
-|            | Prevent the player from dying due to damage from EnderPearl         | bulpearl.bypass.death
+*If you're interested in configuration details, permissions, or commands, check the full documentation or the README file included in the plugin repository.*
