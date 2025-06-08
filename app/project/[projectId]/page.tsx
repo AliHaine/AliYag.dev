@@ -1,12 +1,14 @@
 import {getItemData} from "../../libs/ItemLoader"
 import pageStyle from "./page.module.css"
 import Link from "next/link";
+import Chart from '../../components/chart';
 
 const Project = async ({params}: { params: { projectId: string} }) => {
     const project = await getItemData( params.projectId);
 
     return (
         <div id={pageStyle.pageMain}>
+
             <Link className="fontSizeMedium" href="/allprojects">Back to work list</Link>
 
             <div id={pageStyle.header}>
@@ -27,6 +29,10 @@ const Project = async ({params}: { params: { projectId: string} }) => {
                     ({project.tech.join(", ")})
                 </div>
             </div>
+
+            <h3>Servers running this resource</h3>
+            <Chart id={20655} />
+
 
             <article
                 className={`${pageStyle.articleMain} ${pageStyle.markdown}`}
