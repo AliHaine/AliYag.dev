@@ -1,5 +1,6 @@
 ---
 title: "BulMultiverse"
+statId: 22989
 type: "Project"
 imgSrc: "/item_images/bulmultiverse/BulmultiverseIcon.png"
 category: "dev"

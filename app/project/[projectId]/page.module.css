@@ -27,6 +27,14 @@
     gap: 4px;
 }
 
+#graphDiv {
+    margin-top: 16px;
+    width: 100%;
+    max-width: 900px;
+    color: rgb(var(--color-two)) ;
+    text-align: center;
+}
+
 img.img-small {
     background-color: red;
     width: 20px;

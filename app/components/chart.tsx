@@ -28,10 +28,10 @@ export default function Chart({id}: ChartClientProps) {
     return (
         <ResponsiveContainer width="100%" height={300}>
             <LineChart data={data}>
-                <XAxis dataKey="date" tick={false} label={{ value: "Date (Last 15 days)", position: "insideBottom" }}/>
-                <YAxis />
-                <Tooltip />
-                <Line type="monotone" dataKey="servers" stroke="rgb(var(--color-two)" />
+                <XAxis dataKey="date" tick={false} label={{ value: "Date (Last 15 days)", fill: 'rgb(var(--color-two))' }}/>
+                <YAxis width={35} tick={{ fill: 'rgb(var(--color-two))'}} />
+                <Tooltip labelStyle={{ color: 'rgb(var(--color-two))' }} itemStyle={{ color: 'rgb(var(--color-two))', fontWeight: 'bold' }} />
+                <Line type="monotone" dataKey="servers" stroke="rgb(var(--color-two))" />
             </LineChart>
         </ResponsiveContainer>
     );

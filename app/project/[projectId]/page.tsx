@@ -30,9 +30,12 @@ const Project = async ({params}: { params: { projectId: string} }) => {
                 </div>
             </div>
 
-            <h3>Servers running this resource</h3>
-            <Chart id={20655} />
-
+            {project.statId &&
+                <div id={pageStyle.graphDiv}>
+                    <h3 id={pageStyle.graphHeader} >Servers running this resource</h3>
+                    <Chart id={project.statId} />
+                </div>
+            }
 
             <article
                 className={`${pageStyle.articleMain} ${pageStyle.markdown}`}

@@ -6,6 +6,7 @@
   --color-one: #374151;
   --color-two: 81, 111, 160;
   --color-three: 229, 231, 235;
+  --color-light-blue: 100, 204, 247;
 }
 
 html,
@@ -34,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   cursor: none;
-  color: rgb(var(--color-two));
+  color: rgb(var(--color-light-blue));
   text-decoration: none;
 }
 

@@ -26,6 +26,7 @@ export const getSortedItems = (): Item[] => {
 
         return {
             id,
+            statId: matterResult.data.statId,
             type: matterResult.data.type,
             title: matterResult.data.title,
             imgSrc: matterResult.data.imgSrc,
@@ -60,6 +61,7 @@ export const getItemData = async (itemId: string) => {
     return {
         itemId,
         contentHtml,
+        statId: matterResult.data.statId,
         title: matterResult.data.title,
         github: matterResult.data.github,
         imgSrc: matterResult.data.imgSrc,

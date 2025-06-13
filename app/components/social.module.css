@@ -11,7 +11,7 @@
     width: 32px;
     height: 32px;
     display: block;
-    background-color: rgb(var(--color-two));
+    background-color: rgb(var(--color-light-blue));
 }
 
 @media (min-width: 1024px) {
