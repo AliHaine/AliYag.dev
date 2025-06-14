@@ -33,14 +33,11 @@ export default function Home() {
           </div>
 
           <div id={styles.topRightContent} className={styles.revealText}>
-            <p id={styles.topDescription}>Lorem ipsum dolor sit amet. Eos dicta numquam non fugiat voluptatibus et
-              quibusdam minus est explicabo assumenda. In
-              animi quod ab mollitia corporis est officia quaerat ut pariatur
-              <br/>
-              <br/>
-              explicabo vel itaque itaque aut sunt voluptatem non quae officia.
-              Et provident pariatur At veniam nihil sed ullam quia ut galisum aperiam et possimus impedit ut iure
-              inventore ad rerum .</p>
+            <p id={styles.topDescription}>
+              Passionate about computer science for several years, I’m always curious to understand how things work and eager to build projects. This passion drives me to continuously learn and improve my skills.
+              <br/><br/>
+              Currently, I am focused on deepening my knowledge of mathematics, artificial intelligence, and algorithms, aiming to develop innovative solutions.
+            </p>
           </div>
         </div>
       </div>
