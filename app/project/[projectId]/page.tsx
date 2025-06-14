@@ -9,7 +9,7 @@ const Project = async ({params}: { params: { projectId: string} }) => {
     return (
         <div id={pageStyle.pageMain}>
 
-            <Link className="fontSizeMedium" href="/allprojects">Back to work list</Link>
+            <Link className="fontSizeMedium" href="/">Home</Link>
 
             <div id={pageStyle.header}>
                 <h1>{project.title}</h1>

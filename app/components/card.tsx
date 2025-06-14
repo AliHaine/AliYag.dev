@@ -1,26 +1,28 @@
 import cardStyle from "./card.module.css"
-import {Item} from "@/app/types/item";
+import {CardProps} from "@/app/types/item";
 import Link from "next/link";
 
-export default function Card({item}: {item: Item }) {
+export default function Card({card}: {card: CardProps }) {
+
     return (
-        <Link key={item.id} href={`/project/${item.id}`}>
-            <div className={cardStyle.card} >
-                <div className={cardStyle.topContent}>
-                    <div>{item.date}</div>
-                    <div>{item.title}</div>
-                    <img src="/ArrowRotateIcon.png"  alt='Arrow icon'/>
+        <div key={card.id} className={cardStyle.card} >
+            <div className={cardStyle.topContent}>
+                <div className={cardStyle.cardTitle}>
+                    <div>{card.name}</div>
+                    <div className={cardStyle.cardDate}>{card.year}</div>
                 </div>
-                <div className={cardStyle.midContent}>
-                    <img src={item.imgSrc} alt='Project image view'/>
-                    <p className={cardStyle.cardDescription}>{item.shortDescription}</p>
-                </div>
-                <div className={cardStyle.techContent}>
-                    {item.tech.map(item => (
-                        <div key={item} className={cardStyle.tech}>{item}</div>
+                <div className={cardStyle.cardButtonsArea}>
+                    {Object.entries(card.links).map(([key, link]) => (
+                        <Link key={`${card.id}-${key}`} href={link}><button className={cardStyle.cardButton}>{key}</button></Link>
                     ))}
                 </div>
             </div>
-        </Link>
+            <p className={cardStyle.cardDescription}>{card.description}</p>
+            <div className={cardStyle.techContent}>
+                {card.stacks.map(stack => (
+                    <div key={`${card.id}-${stack}`} className={cardStyle.tech}>{stack}</div>
+                ))}
+            </div>
+        </div>
     )
 }

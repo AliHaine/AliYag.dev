@@ -1,4 +1,4 @@
-import {getTotalItems} from "@/app/libs/ItemLoader";
+import {getTotalCards} from "@/app/libs/ItemLoader";
 
 const GITHUB_API_URL = "https://github-contributions-api.deno.dev/alihaine.json";
 const GITHUB_STARS_URL = ["https://api.github.com/users/alihaine/repos?per_page=100", "https://api.github.com/users/BulPlugins/repos?per_page=100"];
@@ -15,8 +15,8 @@ export const getGitHubStars = async () => {
     for (const url of GITHUB_STARS_URL) {
         const res = await fetch(url);
         const repos = await res.json();
-
-         value = repos.reduce((value: number , currentData: {[key: string]: number}) => value + currentData["stargazers_count"], value);
+        return;
+        value = repos.reduce((value: number , currentData: {[key: string]: number}) => value + currentData["stargazers_count"], value);
     }
     return value;
 }
@@ -26,5 +26,5 @@ export const getServerRunning = async () => {
 }
 
 export const getWorkPosts = async () => {
-    return getTotalItems();
+    return getTotalCards();
 }

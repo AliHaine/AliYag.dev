@@ -1,8 +1,7 @@
 import styles from "./page.module.css";
 import Card from "@/app/components/card";
-import {getSortedItems} from "@/app/libs/ItemLoader";
+import {getSortedCards} from "@/app/libs/ItemLoader";
 import {getGithubContributions, getGitHubStars, getServerRunning, getWorkPosts} from "@/app/libs/StatsApi";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -27,7 +26,7 @@ export default function Home() {
                 <div className={styles.statValue}>{getServerRunning()}</div>
               </div>
               <div className={styles.stat}>
-                <div className={styles.statTitle}>Blog posts</div>
+                <div className={styles.statTitle}>Total projects</div>
                 <div className={styles.statValue}>{getWorkPosts()}</div>
               </div>
             </div>
@@ -46,15 +45,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div id={styles.myWork}>My Work</div>
+      <div id={styles.myWork}>Projects</div>
 
-      <div id={styles.bot}>
-        <div id={styles.cards}>
-          <Card item={getSortedItems()[3]} />
-          <Card item={getSortedItems()[1]} />
-        </div>
+      <div id={styles.cards}>
+        {getSortedCards().map((card) => (
+            <Card key={card.id} card={card} />
+        ))}
       </div>
-      <Link className="fontSizeMedium" href="/allprojects">See all</Link>
     </main>
   );
 }

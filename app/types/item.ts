@@ -10,3 +10,12 @@ export type Item = {
     shortDescription: string
     tech: string[]
 }
+
+export type CardProps = {
+    id: number
+    name: string
+    year: number
+    description: string
+    links: {[key: string]: string}
+    stacks: string[]
+}

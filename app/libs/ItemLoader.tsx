@@ -9,39 +9,36 @@ import remarkGfm from "remark-gfm";
 import rehypeStringify from 'rehype-stringify';
 import { remark } from 'remark'
 
-import type { Item } from "../types/item"
+import type {CardProps, Item} from "../types/item"
 
 const itemsDirectory = path.join(process.cwd(), "items");
+const cardsDirectory = path.join(process.cwd(), "card");
 
-export const getSortedItems = (): Item[] => {
-    const fileNames = fs.readdirSync(itemsDirectory);
+export const getSortedCards = (): CardProps[] => {
+    const fileNames = fs.readdirSync(cardsDirectory);
 
-    const allItems = fileNames.map((fileName) => {
-        const id = fileName.replace(/\.md$/, "")
+    const allCards = fileNames.map((fileName: string) => {
+        const id = fileNames.indexOf(fileName);
 
-        const fullPath = path.join(itemsDirectory, fileName)
-        const fileContents = fs.readFileSync(fullPath, "utf-8")
-
-        const matterResult = matter(fileContents)
+        const fullPath = path.join(cardsDirectory, fileName);
+        const fileContents = fs.readFileSync(fullPath, "utf-8");
+        const matterResult = matter(fileContents);
 
         return {
             id,
-            statId: matterResult.data.statId,
-            type: matterResult.data.type,
-            title: matterResult.data.title,
-            imgSrc: matterResult.data.imgSrc,
-            fullDate: matterResult.data.date,
-            date: matterResult.data.date.slice(6),
-            category: matterResult.data.category,
-            shortDescription: matterResult.data.shortDescription,
-            tech: matterResult.data.tech,
+            name: matterResult.data.name,
+            year: matterResult.data.year,
+            date: matterResult.data.date,
+            description: matterResult.data.description,
+            links: matterResult.data.links,
+            stacks: matterResult.data.stacks,
         }
     });
 
-    return allItems.sort((a, b) => {
+    return allCards.sort((a, b) => {
         const format = "DD-MM-YYYY"
-        const dateOne = moment(a.fullDate, format)
-        const dateTwo = moment(b.fullDate, format)
+        const dateOne = moment(a.date, format)
+        const dateTwo = moment(b.date, format)
         return dateTwo.diff(dateOne);
     });
 }
@@ -72,7 +69,7 @@ export const getItemData = async (itemId: string) => {
     }
 }
 
-export const getTotalItems = async () => {
-    const fileNames = fs.readdirSync(itemsDirectory);
+export const getTotalCards = async () => {
+    const fileNames = fs.readdirSync(cardsDirectory);
     return fileNames.length;
 }

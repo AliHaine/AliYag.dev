@@ -1,47 +1,87 @@
 .card {
-    border: 1px solid rgb(var(--color-two));
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(var(--color-two), 0.3);
     color: rgb(var(--color-three));
-    width: 300px;
-    padding: 10px;
-    border-radius: 10px;
+    width: 320px;
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0 0 0 1px rgba(var(--color-two), 0.1);
 }
 
 .topContent {
     display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cardTitle {
+    display: flex;
     justify-content: space-between;
 }
 
-.topContent img {
-    width: 16px;
+.projectName {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgb(var(--color-three));
 }
 
-.midContent {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    align-items: center;
+.cardDate {
+    font-size: 1.2rem;
+    color: rgba(var(--color-three), 0.6);
 }
 
-.midContent img {
-    width: 100%;
-    aspect-ratio: 2/1;
+.buttonGroup {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.cardButtonsArea {
+    display: flex;
+    gap: 8px;
+}
+
+.cardButton {
+    background-color: rgba(var(--color-two), 0.15);
+    border: 1px solid rgba(var(--color-two), 0.3);
+    color: rgb(var(--color-three));
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.35rem 0.7rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cardButton:hover {
+    background-color: rgba(34, 211, 238, 0.15);
+    border-color: rgb(34, 211, 238);
+    color: rgb(34, 211, 238);
+    box-shadow: 0 0 8px rgba(34, 211, 238, 0.4);
 }
 
 .cardDescription {
-    color: rgb(var(--color-three));
-    opacity: 0.8;
-    font-size: 0.7em;
+    font-size: 0.8rem;
+    color: rgba(var(--color-three), 0.9);
+    line-height: 1.4;
 }
 
 .techContent {
     display: flex;
-    gap: 5px;
-    font-size: 0.8em;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .tech {
-    border: 1px solid rgb(var(--color-two));
-    border-radius: 4px;
-    padding: 2px;
+    background-color: rgba(34, 211, 238, 0.15);
+    color: rgb(34, 211, 238);
+    padding: 0.35rem 0.8rem;
+    border-radius: 9999px;
+    font-size: 0.9em;
+    font-weight: 500;
 }
 
 @media (min-width: 1024px) {
@@ -50,21 +90,16 @@
         padding: 15px;
     }
 
-    .card .topContent img {
-        transform: translate(0, 0);
-        transition: transform 0.5s;
-    }
-
-    .card:hover .topContent img {
-        transform: translate(8px, -8px);
+    .cardTitle {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
     }
 
     .topContent {
+        justify-content: space-between;
+        flex-direction: row;
         font-size: 1.7em;
-    }
-
-    .topContent img {
-        width: 32px;
     }
 
     .cardDescription {
@@ -74,10 +109,8 @@
     .techContent {
         font-size: 1.4em;
     }
-}
 
-@keyframes glow {
-    0% { box-shadow: 0 0 5px rgb(var(--color-two)); }
-    50% { box-shadow: 0 0 15px rgb(var(--color-two)); }
-    100% { box-shadow: 0 0 5px rgb(var(--color-two)); }
+    .tech {
+        font-size: 1rem;
+    }
 }
