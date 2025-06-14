@@ -9,30 +9,34 @@ import remarkGfm from "remark-gfm";
 import rehypeStringify from 'rehype-stringify';
 import { remark } from 'remark'
 
-import type {CardProps, PostProps} from "../types/item"
+import type {CardProps, PostProps} from "./Props"
 
 const itemsDirectory: string = path.join(process.cwd(), "items");
 const cardsDirectory: string = path.join(process.cwd(), "card");
+
+function buildCardProps(fileName: string): CardProps {
+    if (!fileName.endsWith(".md"))
+        fileName = fileName + ".md";
+    const fullPath = path.join(cardsDirectory, fileName);
+    const fileContents: string = fs.readFileSync(fullPath, "utf-8");
+    const matterResult = matter(fileContents);
+
+    return {
+        id: fileName,
+        name: matterResult.data.name,
+        year: matterResult.data.year,
+        date: matterResult.data.date,
+        description: matterResult.data.description,
+        links: matterResult.data.links,
+        stacks: matterResult.data.stacks,
+    }
+}
 
 export const getSortedCards = (): CardProps[] => {
     const fileNames: string[] = fs.readdirSync(cardsDirectory);
 
     const allCards = fileNames.map((fileName: string) => {
-        const id: number = fileNames.indexOf(fileName);
-
-        const fullPath: string = path.join(cardsDirectory, fileName);
-        const fileContents: string = fs.readFileSync(fullPath, "utf-8");
-        const matterResult = matter(fileContents);
-
-        return {
-            id,
-            name: matterResult.data.name,
-            year: matterResult.data.year,
-            date: matterResult.data.date,
-            description: matterResult.data.description,
-            links: matterResult.data.links,
-            stacks: matterResult.data.stacks,
-        }
+        return buildCardProps(fileName);
     });
 
     return allCards.sort((a, b) => {
@@ -43,8 +47,8 @@ export const getSortedCards = (): CardProps[] => {
     });
 }
 
-export const getItemData = async (itemId: string) => {
-    const fullPath: string = path.join(itemsDirectory, itemId + ".md");
+export const getPostData = async (postFileName: string) => {
+    const fullPath: string = path.join(itemsDirectory, postFileName + ".md");
     const fileContents: string = fs.readFileSync(fullPath, "utf-8");
     const matterResult = matter(fileContents);
 
@@ -56,10 +60,10 @@ export const getItemData = async (itemId: string) => {
     const contentHtml = processedContent.toString();
 
     return {
-        id: itemId,
         contentHtml,
         statId: matterResult.data.statId,
         title: matterResult.data.title,
+        cardProps: buildCardProps(postFileName),
     }
 }
 

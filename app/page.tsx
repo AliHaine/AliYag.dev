@@ -1,7 +1,7 @@
 import styles from "./page.module.css";
 import Card from "@/app/components/card";
-import {getSortedCards} from "@/app/libs/ItemLoader";
-import {getGithubContributions, getGitHubStars, getServerRunning, getWorkPosts} from "@/app/libs/StatsApi";
+import {getSortedCards} from "@/app/utils/ItemLoader";
+import {getGithubContributions, getGitHubStars, getServerRunning, getWorkPosts} from "@/app/utils/StatsApi";
 
 export default function Home() {
   return (

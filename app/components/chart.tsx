@@ -16,10 +16,8 @@ export default function Chart({id}: ChartClientProps) {
                 rawData.forEach(([timestamp, servers]: [number, number]) => {
                     const currentDate = new Date(timestamp).toLocaleString().slice(0, -14);
                     mapValues.set(currentDate, servers);
-                    console.log(currentDate);
                 });
                 const dataArray = Array.from(mapValues.entries()).map(([date, servers]) => ({ date, servers }));
-
                 setData(dataArray);
             })
             .catch(console.error);

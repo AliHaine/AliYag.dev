@@ -1,10 +1,11 @@
-import {getItemData} from "../../libs/ItemLoader"
+import {getPostData} from "@/app/utils/ItemLoader"
 import pageStyle from "./page.module.css"
 import Link from "next/link";
 import Chart from '../../components/chart';
+import cardStyle from "@/app/components/card.module.css";
 
 const Project = async ({params}: { params: { projectId: string} }) => {
-    const project = await getItemData(params.projectId);
+    const postProps = await getPostData(params.projectId);
 
     return (
         <div id={pageStyle.pageMain}>
@@ -12,19 +13,30 @@ const Project = async ({params}: { params: { projectId: string} }) => {
             <Link className="fontSizeMedium" href="/">Home</Link>
 
             <div id={pageStyle.header}>
-                <h1>{project.title}</h1>
+                <h1>{postProps.title}</h1>
+                <div className={cardStyle.cardButtonsArea}>
+                    {Object.entries(postProps.cardProps.links).map(([key, link]) => (
+                        <Link key={`${postProps.cardProps.id}-${key}`} href={link}><button className={cardStyle.cardButton}>{key}</button></Link>
+                    ))}
+                </div>
+
+                <div className={cardStyle.techContent}>
+                    {postProps.cardProps.stacks.map(stack => (
+                        <div key={`${postProps.cardProps.id}-${stack}`} className={cardStyle.tech}>{stack}</div>
+                    ))}
+                </div>
             </div>
 
-            {project.statId &&
+            {postProps.statId &&
                 <div id={pageStyle.graphDiv}>
                     <h3 id={pageStyle.graphHeader} >Servers running this resource</h3>
-                    <Chart id={project.statId} />
+                    <Chart id={postProps.statId} />
                 </div>
             }
 
             <article
                 className={`${pageStyle.articleMain} ${pageStyle.markdown}`}
-                dangerouslySetInnerHTML={{__html: project.contentHtml}}
+                dangerouslySetInnerHTML={{__html: postProps.contentHtml}}
             />
         </div>);
 }

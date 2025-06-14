@@ -7,8 +7,6 @@ _BulMultiverse is a minimalistic solution designed specifically for creating and
 
 <img src="/item_images/bulmultiverse/BulmultiverseIcon.png" style="max-width:20%; align-items: center" />
 
-[Download page](https://www.spigotmc.org/resources/118884/ "Click to download")
-
 [Wiki with complete explanation](https://github.com/BulPlugins/BulMultiverse/wiki "Click to view")
 
 [Developer Api](https://github.com/BulPlugins/BulMultiverse/wiki/Dev-API "Click to code")

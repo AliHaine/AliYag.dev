@@ -1,5 +1,5 @@
 import cardStyle from "./card.module.css"
-import {CardProps} from "@/app/types/item";
+import {CardProps} from "@/app/utils/Props";
 import Link from "next/link";
 
 export default function Card({card}: {card: CardProps }) {

@@ -2,6 +2,7 @@ export type PostProps = {
     id: string
     statId: number
     title: string
+    cardProps: CardProps
 }
 
 export type CardProps = {
