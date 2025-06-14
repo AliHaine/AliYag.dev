@@ -56,16 +56,10 @@ export const getItemData = async (itemId: string) => {
     const contentHtml = processedContent.toString();
 
     return {
-        itemId,
+        id: itemId,
         contentHtml,
         statId: matterResult.data.statId,
         title: matterResult.data.title,
-        github: matterResult.data.github,
-        imgSrc: matterResult.data.imgSrc,
-        date: matterResult.data.date,
-        category: matterResult.data.category,
-        shortDescription: matterResult.data.shortDescription,
-        tech: matterResult.data.tech,
     }
 }
 

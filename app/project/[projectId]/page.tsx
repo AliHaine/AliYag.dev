@@ -4,7 +4,7 @@ import Link from "next/link";
 import Chart from '../../components/chart';
 
 const Project = async ({params}: { params: { projectId: string} }) => {
-    const project = await getItemData( params.projectId);
+    const project = await getItemData(params.projectId);
 
     return (
         <div id={pageStyle.pageMain}>
@@ -13,9 +13,6 @@ const Project = async ({params}: { params: { projectId: string} }) => {
 
             <div id={pageStyle.header}>
                 <h1>{project.title}</h1>
-                <div id={pageStyle.techContent}>
-                    {project.tech.join(", ")}
-                </div>
             </div>
 
             {project.statId &&

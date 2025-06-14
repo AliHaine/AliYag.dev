@@ -1,12 +1,6 @@
 ---
 title: "BulMultiverse"
 statId: 22989
-type: "Project"
-imgSrc: "/item_images/bulmultiverse/BulmultiverseIcon.png"
-category: "dev"
-date: "10/08/2024"
-shortDescription: "Ultra light and optimized world manager"
-tech: ["Java", "Minecraft"]
 ---
 
 _BulMultiverse is a minimalistic solution designed specifically for creating and managing Minecraft worlds with unparalleled efficiency. If you're looking for a no-frills, performance-optimized tool, this is the plugin for you. Read the full documentation here for a complete explanation of all features._
