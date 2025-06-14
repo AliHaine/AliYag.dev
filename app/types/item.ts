@@ -1,4 +1,4 @@
-export type Item = {
+export type PostProps = {
     id: string
     statId: number
     type: string

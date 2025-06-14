@@ -1,7 +1,7 @@
 import fs from "fs"
 import matter from "gray-matter"
 import path from "path"
-import moment from "moment"
+import moment, {Moment} from "moment"
 import remarkRehype from 'remark-rehype';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from "remark-gfm";
@@ -9,19 +9,19 @@ import remarkGfm from "remark-gfm";
 import rehypeStringify from 'rehype-stringify';
 import { remark } from 'remark'
 
-import type {CardProps, Item} from "../types/item"
+import type {CardProps, PostProps} from "../types/item"
 
-const itemsDirectory = path.join(process.cwd(), "items");
-const cardsDirectory = path.join(process.cwd(), "card");
+const itemsDirectory: string = path.join(process.cwd(), "items");
+const cardsDirectory: string = path.join(process.cwd(), "card");
 
 export const getSortedCards = (): CardProps[] => {
-    const fileNames = fs.readdirSync(cardsDirectory);
+    const fileNames: string[] = fs.readdirSync(cardsDirectory);
 
     const allCards = fileNames.map((fileName: string) => {
-        const id = fileNames.indexOf(fileName);
+        const id: number = fileNames.indexOf(fileName);
 
-        const fullPath = path.join(cardsDirectory, fileName);
-        const fileContents = fs.readFileSync(fullPath, "utf-8");
+        const fullPath: string = path.join(cardsDirectory, fileName);
+        const fileContents: string = fs.readFileSync(fullPath, "utf-8");
         const matterResult = matter(fileContents);
 
         return {
@@ -37,15 +37,15 @@ export const getSortedCards = (): CardProps[] => {
 
     return allCards.sort((a, b) => {
         const format = "DD-MM-YYYY"
-        const dateOne = moment(a.date, format)
-        const dateTwo = moment(b.date, format)
+        const dateOne: Moment = moment(a.date, format)
+        const dateTwo: Moment = moment(b.date, format)
         return dateTwo.diff(dateOne);
     });
 }
 
 export const getItemData = async (itemId: string) => {
-    const fullPath = path.join(itemsDirectory, itemId + ".md");
-    const fileContents = fs.readFileSync(fullPath, "utf-8");
+    const fullPath: string = path.join(itemsDirectory, itemId + ".md");
+    const fileContents: string = fs.readFileSync(fullPath, "utf-8");
     const matterResult = matter(fileContents);
 
     const processedContent = await remark().use(remarkRehype, { allowDangerousHtml: true }).
@@ -70,6 +70,6 @@ export const getItemData = async (itemId: string) => {
 }
 
 export const getTotalCards = async () => {
-    const fileNames = fs.readdirSync(cardsDirectory);
+    const fileNames: string[] = fs.readdirSync(cardsDirectory);
     return fileNames.length;
 }

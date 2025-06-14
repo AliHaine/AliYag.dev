@@ -13,20 +13,8 @@ const Project = async ({params}: { params: { projectId: string} }) => {
 
             <div id={pageStyle.header}>
                 <h1>{project.title}</h1>
-                {project.github &&
-                    <div>
-                        <a href={project.github} target="_blank" rel="noreferrer">
-                            Github page
-                        </a>
-                    </div>
-                }
                 <div id={pageStyle.techContent}>
-                    <div id={pageStyle.techContainer}>
-                        {project.tech.map((tech: string) => (
-                            <img key={tech} src={`/tech_icons/${tech.toLowerCase()}.png`} className="techIcon" alt={`Icon of ${tech}`}/>
-                        ))}
-                    </div>
-                    ({project.tech.join(", ")})
+                    {project.tech.join(", ")}
                 </div>
             </div>
 
