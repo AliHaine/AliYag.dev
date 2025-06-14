@@ -13,7 +13,7 @@ _BulMultiverse is a minimalistic solution designed specifically for creating and
 
 [Discord server to get help](https://discord.gg/wxnTV68dX2 "Click to join")
 
-![Remember blocks image](/item_images/bulmultiverse/BulmultiverseComp.png)
+![Remember blocks image](/item_images/bulmultiverse/BulMultiverseComp.png)
 
 ## Features
 

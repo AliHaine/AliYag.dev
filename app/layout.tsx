@@ -18,6 +18,9 @@ const jua = Jua({
 export const metadata: Metadata = {
   title: "Ali YAGMUR - Personal website",
   description: "Personal website with blogs and projects",
+  icons: {
+    icon: "/favicon.ico",
+  }
 };
 
 export default function RootLayout({
@@ -27,6 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        {/* You can add other head tags here if you want */}
+      </head>
       <body className={`${inter.className} ${jua.className}`} style={{display: "flex", flexDirection: "column"}}>
         <Mouse />
         {children}
