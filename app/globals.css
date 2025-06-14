@@ -70,6 +70,10 @@ button {
             0px 0px 140px 10px #00ffff;
   }
 
+  button:hover {
+    cursor: none;
+  }
+
   a:hover {
     color: rgb(var(--color-three));
   }

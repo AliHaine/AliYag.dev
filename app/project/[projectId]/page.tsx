@@ -4,8 +4,9 @@ import Link from "next/link";
 import Chart from '../../components/chart';
 import cardStyle from "@/app/components/card.module.css";
 
-const Project = async ({params}: { params: { projectId: string} }) => {
-    const postProps = await getPostData(params.projectId);
+const Project = async (props: { params: { projectId: string } }) => {
+    const { projectId } = await props.params;
+    const postProps = await getPostData(projectId);
 
     return (
         <div id={pageStyle.pageMain}>
@@ -15,7 +16,9 @@ const Project = async ({params}: { params: { projectId: string} }) => {
             <div id={pageStyle.header}>
                 <h1>{postProps.title}</h1>
                 <div className={cardStyle.cardButtonsArea}>
-                    {Object.entries(postProps.cardProps.links).map(([key, link]) => (
+                    {Object.entries(postProps.cardProps.links)
+                        .filter(([key]) => key !== "Blog post")
+                        .map(([key, link]) => (
                         <Link key={`${postProps.cardProps.id}-${key}`} href={link}><button className={cardStyle.cardButton}>{key}</button></Link>
                     ))}
                 </div>
