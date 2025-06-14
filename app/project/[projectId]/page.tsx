@@ -5,7 +5,7 @@ import Chart from '../../components/chart';
 import cardStyle from "@/app/components/card.module.css";
 
 const Project = async (props: { params: { projectId: string } }) => {
-    const { projectId } = await props.params;
+    const { projectId } = props.params;
     const postProps = await getPostData(projectId);
 
     return (
