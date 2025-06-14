@@ -3,10 +3,11 @@ import pageStyle from "./page.module.css"
 import Link from "next/link";
 import Chart from '../../components/chart';
 import cardStyle from "@/app/components/card.module.css";
+import {PostProps} from "@/app/utils/Props";
 
-const Project = async (props: { params: { projectId: string } }) => {
-    const { projectId } = props.params;
-    const postProps = await getPostData(projectId);
+export default async function Project(props: { params: Promise<{ projectId: string }>; }) {
+    const params = await props.params;
+    const postProps: PostProps = await getPostData(params.projectId);
 
     return (
         <div id={pageStyle.pageMain}>
@@ -19,8 +20,8 @@ const Project = async (props: { params: { projectId: string } }) => {
                     {Object.entries(postProps.cardProps.links)
                         .filter(([key]) => key !== "Blog post")
                         .map(([key, link]) => (
-                        <Link key={`${postProps.cardProps.id}-${key}`} href={link}><button className={cardStyle.cardButton}>{key}</button></Link>
-                    ))}
+                            <Link key={`${postProps.cardProps.id}-${key}`} href={link}><button className={cardStyle.cardButton}>{key}</button></Link>
+                        ))}
                 </div>
 
                 <div className={cardStyle.techContent}>
@@ -43,5 +44,3 @@ const Project = async (props: { params: { projectId: string } }) => {
             />
         </div>);
 }
-
-export default Project;

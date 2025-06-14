@@ -60,7 +60,7 @@ export const getPostData = async (postFileName: string) => {
     const contentHtml = processedContent.toString();
 
     return {
-        contentHtml,
+        contentHtml: contentHtml,
         statId: matterResult.data.statId,
         title: matterResult.data.title,
         cardProps: buildCardProps(postFileName),
