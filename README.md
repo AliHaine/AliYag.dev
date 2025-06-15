@@ -14,6 +14,10 @@ npm run dev
 
 ## Preview
 
+(Desktop)
+
 ![Preview mobile](public/ReadmeDesktop.png)
+
+(Mobile)
 
 ![Preview mobile](public/ReadmeMobile.gif)
