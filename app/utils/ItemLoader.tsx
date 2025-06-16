@@ -49,7 +49,12 @@ export const getSortedCards = (): CardProps[] => {
 
 export const getPostData = async (postFileName: string) => {
     const fullPath: string = path.join(itemsDirectory, postFileName + ".md");
-    const fileContents: string = fs.readFileSync(fullPath, "utf-8");
+    let fileContents: string;
+    try {
+        fileContents = fs.readFileSync(fullPath, "utf-8");
+    } catch (error) {
+        return null;
+    }
     const matterResult = matter(fileContents);
 
     const processedContent = await remark().use(remarkRehype, { allowDangerousHtml: true }).

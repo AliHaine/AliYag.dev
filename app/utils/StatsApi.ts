@@ -2,7 +2,13 @@ import {getTotalCards} from "@/app/utils/ItemLoader";
 
 const GITHUB_API_URL = "https://github-contributions-api.deno.dev/alihaine.json";
 const GITHUB_STARS_URL = ["https://api.github.com/users/alihaine/repos?per_page=100", "https://api.github.com/users/BulPlugins/repos?per_page=100"];
+const BSTATS_SERVERS_URL = "https://bstats.org/api/v1/plugins/%id%/charts/servers/data?maxElements=1"
+const bstatsIds: {[key: string]: number} = {
+    "BulMultiverse": 22989,
+    "BulPearl": 20655,
+}
 let starValue = -1;
+
 
 export const getGithubContributions = async () => {
     const res = await fetch(GITHUB_API_URL);
@@ -15,7 +21,7 @@ export const getGitHubStars = async () => {
     for (const url of GITHUB_STARS_URL) {
         const res = await fetch(url);
         if (!res.ok) {
-            console.error(`Failed to fetch ${url}: ${res.statusText}`);
+            console.log(`Failed to fetch ${url}: ${res.statusText}`);
             return starValue;
         }
 
@@ -27,7 +33,16 @@ export const getGitHubStars = async () => {
 }
 
 export const getServerRunning = async () => {
-    return 87;
+    let value: number = 0;
+    Object.entries(bstatsIds).forEach((entry) => {
+        console.log(await getBstatsServerValues(entry.at(1), 0));
+    })
+    return value;
+}
+
+export const getBstatsServerValues = async (id: number, maxElements: number) => {
+    const bstatsUrlBuild = BSTATS_SERVERS_URL.replace('%id%', id);
+    return fetch(bstatsUrlBuild).then((res) => res.json());
 }
 
 export const getWorkPosts = async () => {

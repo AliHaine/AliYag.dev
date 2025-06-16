@@ -4,10 +4,14 @@ import Link from "next/link";
 import Chart from '../../components/chart';
 import cardStyle from "@/app/components/card.module.css";
 import {PostProps} from "@/app/utils/Props";
+import { redirect } from "next/navigation";
 
 export default async function Project(props: { params: Promise<{ projectId: string }>; }) {
     const params = await props.params;
-    const postProps: PostProps = await getPostData(params.projectId);
+    const postProps: PostProps | null = await getPostData(params.projectId);
+
+    if (!postProps)
+        redirect("/");
 
     return (
         <div id={pageStyle.pageMain}>

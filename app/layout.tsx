@@ -30,10 +30,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-        {/* You can add other head tags here if you want */}
-      </head>
       <body className={`${inter.className} ${jua.className}`} style={{display: "flex", flexDirection: "column"}}>
         <Mouse />
         {children}
