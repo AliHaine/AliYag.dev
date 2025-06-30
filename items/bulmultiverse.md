@@ -30,3 +30,17 @@ And that's all. This plugin does exactly what you want from a multiverse and wor
 ## Addons
 
 BulMultiverse is designed to be light and efficient by default, but if you need additional features, you can extend its functionality with addons. These small, optional addons can be placed in the /addons folder (within the folder bulmultiverse) to enable specific features without bloating the plugin. This ensures that your server stays as lightweight as possible, only running the features you actually need. More about addons here
+
+## Last reviews
+
+_Reviews from [SpigotMC](https://www.spigotmc.org/resources/118884/ "Click see")_
+
+<div>
+
+<img src="/item_images/bulmultiverse/review1.png" style="min-width:30%;"/>
+<img src="/item_images/bulmultiverse/review2.png" style="min-width:30%;" /> 
+<img src="/item_images/bulmultiverse/review3.png" style="min-width:30%;" /> 
+<img src="/item_images/bulmultiverse/review4.png" style="min-width:30%;" /> 
+<img src="/item_images/bulmultiverse/review5.png" style="min-width:30%;" />
+
+</div>
