@@ -40,7 +40,7 @@ a {
 }
 
 button {
-  cursor: none;
+  cursor: none !important;
 }
 
 .fontSizeMedium {
