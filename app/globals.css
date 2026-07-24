@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root{
+  --bg: #161d26;
+  --bg-soft: #1d2530;
+  --panel: #232d39;
+  --panel-hi: #29343f;
+  --line: #384453;
+  --text: #e4e9ee;
+  --muted: #94a1ae;
+  --amber: #e6a23c;
+  --cyan: #5fd1cc;
+  --mono: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --sans: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+}
+
+*{box-sizing:border-box; margin:0; padding:0;}
+
+html{scroll-behavior:smooth;}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}

@@ -1,0 +1,78 @@
+#header {
+    position:sticky; top:0; z-index:50;
+    background:rgba(22,29,38,0.85);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+}
+
+#navbar {
+    max-width:920px;
+    margin:0 auto;
+    padding:16px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+#dotName {
+    display: flex;
+    align-items:center;
+    gap: 8px;
+}
+
+#dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--cyan);
+    box-shadow: 0 0 8px var(--cyan);
+    display: flex;
+    align-items:center;
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+/* Burger Lines */
+.burger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: var(--muted);
+    border-radius: 2px;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+#navLinksDesktop {
+    display: none;
+}
+
+@media (min-width : 920px) {
+    .burger,
+    .navLinks {
+        display: none;
+    }
+
+    #navLinksDesktop {
+        display: flex;
+        gap: 16px;
+    }
+}
+
+
+.navLink {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--muted);
+    transition:color .15s;
+}
+.navLink:hover {
+    color:var(--amber);
+}
