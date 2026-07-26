@@ -14,65 +14,19 @@
     justify-content:space-between;
 }
 
-#dotName {
-    display: flex;
-    align-items:center;
-    gap: 8px;
-}
-
-#dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: var(--cyan);
-    box-shadow: 0 0 8px var(--cyan);
-    display: flex;
-    align-items:center;
-}
-
-.burger {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 4px;
-}
-
-/* Burger Lines */
-.burger span {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background-color: var(--muted);
-    border-radius: 2px;
-    transition: transform 0.2s, opacity 0.2s;
-}
-
-#navLinksDesktop {
-    display: none;
-}
-
-@media (min-width : 920px) {
-    .burger,
-    .navLinks {
-        display: none;
-    }
-
-    #navLinksDesktop {
-        display: flex;
-        gap: 16px;
-    }
-}
-
-
 .navLink {
     font-family: var(--mono);
     font-size: 13px;
     color: var(--muted);
     transition:color .15s;
+    padding: 4px;
 }
 .navLink:hover {
     color:var(--amber);
+}
+
+@media (min-width : 920px) {
+    .navLink {
+        font-size: 18px;
+    }
 }

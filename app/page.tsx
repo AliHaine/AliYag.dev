@@ -1,10 +1,15 @@
-import Image from "next/image";
-import navbar from "@/app/components/navbar/navbar";
+import Navbar from "@/app/components/navbar/navbar";
+import Whoami from "@/app/components/whoami/whoami";
 
 export default function Home() {
   return (
     <div>
-      <div>{navbar()}</div>
+        <div id="bgGrid"></div>
+        {Navbar()}
+        <div id="main">
+            {Whoami()}
+            {about()}
+        </div>
     </div>
   );
 }
