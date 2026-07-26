@@ -1,0 +1,11 @@
+#aboutMain {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.paraBody {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}

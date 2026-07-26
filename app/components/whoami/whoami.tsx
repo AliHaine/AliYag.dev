@@ -11,7 +11,7 @@ export default function Whoami()  {
                 />
             </div>
             <div className={whoamiStyles.plateTag}><span className={whoamiStyles.sq}></span>Industrie 4.0 · SCADA · IoT industriel</div>
-            <p className={whoamiStyles.lede}>
+            <p className="para">
                 Je conçois du firmware bas niveau et des passerelles IoT pour des lignes de production — du PCB au
                 cloud, en passant par le protocole industriel qu'il faut faire parler à tout le monde.
             </p>
