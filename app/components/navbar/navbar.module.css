@@ -1,0 +1,32 @@
+#header {
+    position:sticky; top:0; z-index:50;
+    background:rgba(22,29,38,0.85);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+}
+
+#navbar {
+    max-width:920px;
+    margin:0 auto;
+    padding:16px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.navLink {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--muted);
+    transition:color .15s;
+    padding: 4px;
+}
+.navLink:hover {
+    color:var(--amber);
+}
+
+@media (min-width : 920px) {
+    .navLink {
+        font-size: 18px;
+    }
+}
