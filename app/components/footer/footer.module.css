@@ -1,0 +1,29 @@
+.footerContent {
+    padding: 12px;
+    border-top: 1px solid var(--line);
+    background: rgba(22,29,38,0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+#contacts {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.footerContent a {
+    color:var(--amber);
+}
+
+.footerContent a:hover {
+    color:var(--cyan);
+}
+
+.footer {
+    font-size:14px
+}

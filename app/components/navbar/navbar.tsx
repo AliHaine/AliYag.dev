@@ -5,12 +5,11 @@ export default function Navbar() {
         about: "#about",
         skills: "#skills",
         projects: "#projects",
-        experience: "#experience",
-        contact: "#contact"
+        experience: "#experience"
     }
 
     return (
-        <div id={navbarStyles.header}>
+        <nav id={navbarStyles.header}>
             <div id={navbarStyles.navbar}>
                 {Object.entries(links).map(([key, value]) => (
                     <a className={navbarStyles.navLink} key={key} href={value}>
@@ -18,6 +17,6 @@ export default function Navbar() {
                     </a>
                 ))}
             </div>
-        </div>
+        </nav>
     )
 }
