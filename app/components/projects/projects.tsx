@@ -2,7 +2,7 @@ import projectStyles from "./projects.module.css"
 
 export default function Projects() {
     return (
-        <section>
+        <section id='projects'>
             <h2 className="title">Projets</h2>
 
             <div className={projectStyles.projectsGrp}>

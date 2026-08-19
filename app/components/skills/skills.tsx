@@ -2,7 +2,7 @@ import skillsStyles from "./skills.module.css"
 
 export default function Skills() {
     return (
-        <section>
+        <section id='skills'>
             <h2 className="title">Compétences</h2>
             <div id={skillsStyles.SkillsGrp}>
                 <div className={skillsStyles.skillRow}>
