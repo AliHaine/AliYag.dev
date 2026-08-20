@@ -1,39 +1,64 @@
+.projectsGrp {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+  display: grid;
+}
+
 .project {
-    background:var(--panel);
-    border:1px solid var(--line);
-    border-radius:6px;
-    overflow:hidden;
-    position:relative;
-    box-shadow:0 4px 14px rgba(0,0,0,0.25);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
 }
-.project::before, .project::after{
-    content:''; position:absolute; width:5px; height:5px; border-radius:50%;
-    background:#3a4350; top:9px; box-shadow:0 0 0 1px #0006 inset; z-index:2;
-}
-.project::before{left:60px;}
-.project::after{right:12px;}
 
 .projectHeader {
-    display:flex;
-    padding:8px;
-    background:var(--bg-soft);
-    border-bottom:1px solid var(--line);
+  background: var(--bg-soft);
+  border-bottom: 1px solid var(--line);
+  font-family: var(--mono);
+  color: var(--muted);
+  justify-content: space-between;
+  padding: 8px;
+  display: flex;
 }
 
 .projectHeaderName {
-    font-family:var(--mono);
-    font-size:18px;
-    color:var(--amber);
-    margin-left:8px;
+  color: var(--amber);
+  font-size: 18px;
 }
 
 .projectBody {
-    padding: 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px;
+  display: flex;
 }
 
-.projectButtons{display:flex; gap:18px; font-family:var(--mono); font-size:15px;}
-.projectButton a{color:var(--muted); border-bottom:1px dotted var(--muted); padding-bottom:1px;}
-.projectButton a:hover{color:var(--amber); border-color:var(--amber);}
+.projectButtons, .techs {
+  flex-wrap: wrap;
+  gap: 10px;
+  display: flex;
+}
+
+.projectButton {
+  color: var(--muted);
+  border-bottom: 1px dotted var(--muted);
+}
+
+.techs span {
+  color: var(--cyan);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px 8px;
+  font-size: 12px;
+}
+
+.more {
+  border: 1px solid var(--cyan);
+  color: var(--cyan);
+  cursor: pointer;
+  background: none;
+  margin: 24px auto 0;
+  padding: 10px 16px;
+  display: block;
+}
